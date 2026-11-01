@@ -1021,6 +1021,30 @@
     setTxt('#hero-real-ig span', t.t_btn_ig);
     setTxt('#hero-real-wa span', t.t_btn_order);
 
+    // Translate dynamic Hero Stage values (date, engine, miles, auction date)
+    const heroDateEl = document.getElementById('hero-real-date');
+    if (heroDateEl) {
+      const dNum = (heroDateEl.textContent.match(/\d+/) || ['02'])[0];
+      const dPrefix = currentLang === 'ru' ? '● ДАТА АУКЦИОНА:' : currentLang === 'en' ? '● AUCTION DATE:' : '● HƏRRAC TARİXİ:';
+      heroDateEl.textContent = `${dPrefix} ${dNum} ${t.month_nov.toUpperCase()} AUCTION`;
+    }
+    const heroEngEl = document.getElementById('hero-real-engine');
+    if (heroEngEl) {
+      const lit = (heroEngEl.textContent.match(/[\d.]+L/) || ['2.0L'])[0];
+      const isH = /hybrid|hibrid|гибрид/i.test(heroEngEl.textContent);
+      heroEngEl.textContent = `${lit} ${(isH ? t.fuel_hybrid : t.fuel_petrol).toUpperCase()}`;
+    }
+    const heroMilesEl = document.getElementById('hero-real-miles');
+    if (heroMilesEl) {
+      const mNum = (heroMilesEl.textContent.match(/[\d,]+/) || ['65,572'])[0];
+      heroMilesEl.textContent = `${mNum} ${t.unit_miles}`;
+    }
+    const heroAucEl = document.getElementById('hero-real-auc');
+    if (heroAucEl) {
+      const aNum = (heroAucEl.textContent.match(/\d+/) || ['02'])[0];
+      heroAucEl.textContent = `${aNum} ${t.month_nov} auction`;
+    }
+
     // 9 Real Lots Section
     setTxt('#real-lots .spec-pill span', t.lots_pill);
     setTxt('[data-i18n="lots_title"]', t.lots_title);
@@ -1170,6 +1194,37 @@
     setTxt('#calc-wa-btn span', t.calc_wa_cta);
 
     if (typeof window.recalcQepik === 'function') window.recalcQepik();
+
+    // Translate dynamic Calculator labels (#calc-selected-car-banner, #lbl-country-val, #lbl-fuel-val, #lbl-cc-val, #inv-save-azn)
+    const selBanner = document.getElementById('calc-selected-car-banner');
+    if (selBanner) {
+      const bidTxt = document.getElementById('lbl-bid-val')?.textContent || '$6,400';
+      const carMatch = selBanner.textContent.match(/:\s*([^(]+)\(/);
+      const carName = carMatch ? carMatch[1].trim() : '2022 HYUNDAI SONATA LIMITED HYBRID';
+      selBanner.textContent = `${t.calc_sel_prefix} ${carName} (${bidTxt} ${t.calc_sel_suffix})`;
+    }
+    const activeCountryIdx = Array.from(document.querySelectorAll('#country-pills .select-pill')).findIndex((b) => b.classList.contains('active'));
+    const countryValEl = document.getElementById('lbl-country-val');
+    if (countryValEl && activeCountryIdx >= 0) {
+      countryValEl.textContent = [t.c_country_usa, t.c_country_kor, t.c_country_chn][activeCountryIdx];
+    }
+    const activeFuelIdx = Array.from(document.querySelectorAll('#fuel-pills .select-pill')).findIndex((b) => b.classList.contains('active'));
+    const fuelValEl = document.getElementById('lbl-fuel-val');
+    if (fuelValEl && activeFuelIdx >= 0) {
+      fuelValEl.textContent = [t.c_fuel_petrol, t.c_fuel_hybrid, t.c_fuel_ev][activeFuelIdx];
+    }
+    const ccValEl = document.getElementById('lbl-cc-val');
+    const ccInput = document.getElementById('range-cc');
+    if (ccValEl && ccInput) {
+      const ccNum = parseInt(ccInput.value, 10) || 2000;
+      const unitCc = currentLang === 'ru' ? 'см³' : currentLang === 'en' ? 'cc' : 'sm³';
+      ccValEl.textContent = activeFuelIdx === 2 ? `${t.c_fuel_ev} (0 ${unitCc})` : `${ccNum} ${unitCc} (${(ccNum / 1000).toFixed(1)}L)`;
+    }
+    const saveEl = document.getElementById('inv-save-azn');
+    if (saveEl) {
+      const saveNum = (saveEl.textContent.match(/\+[\d,.]+/) || ['+9,106.30'])[0].replace('+', '');
+      saveEl.textContent = `${t.inv_save_prefix}${saveNum}${t.inv_save_suffix}`;
+    }
 
     // Contacts & Footer
     setTxt('#contacts .section-header .spec-pill span', t.hq_pill);
