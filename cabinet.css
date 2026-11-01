@@ -1,0 +1,457 @@
+/* ==========================================================================
+   @QEPIYEQEPIK — USER CABINET (GOOGLE, APPLE ID, SMS OTP) & SYMMETRY SYSTEM
+   ========================================================================== */
+
+.cabinet-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  background: var(--orange-subtle);
+  border: 1px solid var(--border-orange);
+  color: var(--orange-core);
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.cabinet-trigger-btn:hover {
+  background: var(--orange-gradient);
+  color: #FFFFFF;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-orange);
+}
+
+.cabinet-trigger-btn .cab-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald-ok);
+  box-shadow: 0 0 8px var(--emerald-ok);
+}
+
+/* Header responsive polish so all header controls stay on 1 symmetric line */
+.header-inner {
+  gap: 14px;
+}
+.nav-links a {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* Save Lot button on 9 real car cards */
+.lot-save-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
+  background: rgba(12, 16, 23, 0.84);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.lot-save-btn:hover,
+.lot-save-btn.saved {
+  background: var(--orange-core);
+  border-color: var(--orange-core);
+  color: #FFFFFF;
+}
+
+/* USER PANEL / CLIENT PORTAL SECTION */
+.cabinet-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.auth-card,
+.portal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-grid);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.auth-card {
+  border-color: var(--border-orange);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-gradient);
+}
+
+.auth-provider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-provider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-provider-btn:hover {
+  border-color: var(--orange-core);
+  background: var(--orange-subtle);
+  transform: translateY(-1px);
+}
+
+.auth-provider-btn.active-method {
+  border-color: var(--orange-core);
+  background: var(--orange-subtle);
+  box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.12);
+}
+
+.auth-provider-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.auth-provider-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-grid);
+  color: var(--text-sub);
+}
+
+.sms-otp-box {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sms-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.sms-input {
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border-grid);
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 0 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+}
+
+.sms-input:focus {
+  border-color: var(--orange-core);
+}
+
+.sms-send-btn {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--orange-gradient);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.otp-code-row {
+  display: none;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border-grid);
+}
+
+.otp-code-row.visible {
+  display: grid;
+}
+
+/* PORTAL RIGHT PANEL */
+.portal-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-grid);
+}
+
+.portal-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portal-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--orange-gradient);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: var(--shadow-orange);
+}
+
+.portal-kpis {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.portal-kpi-pill {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portal-kpi-pill span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.portal-kpi-pill strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.portal-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.portal-tab-btn {
+  height: 42px;
+  border-radius: 11px;
+  border: 1px solid var(--border-grid);
+  background: var(--bg-card-alt);
+  color: var(--text-sub);
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.2s ease;
+}
+
+.portal-tab-btn.active {
+  background: var(--orange-subtle);
+  border-color: var(--orange-core);
+  color: var(--orange-core);
+}
+
+.portal-tab-pane {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.portal-tab-pane.active {
+  display: flex;
+}
+
+.bid-row-card {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+}
+
+.bid-row-card img {
+  width: 76px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border-grid);
+}
+
+.tracking-stepper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.track-step {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.track-step.done {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: var(--emerald-bg);
+}
+
+.track-step.current {
+  border-color: var(--orange-core);
+  background: var(--orange-subtle);
+}
+
+.track-step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--orange-core);
+}
+
+.track-step.done .track-step-num {
+  color: var(--emerald-ok);
+}
+
+.track-step-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* MODAL OVERLAY FOR QUICK HEADER ACCESS */
+.qq-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 11, 16, 0.72);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.qq-modal-backdrop.open {
+  display: flex;
+}
+
+.qq-modal-dialog {
+  width: 100%;
+  max-width: 520px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-orange);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+}
+
+.qq-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border-grid);
+  background: var(--bg-card-alt);
+  color: var(--text-sub);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 1180px) {
+  .cabinet-grid {
+    grid-template-columns: 1fr;
+  }
+  .tracking-stepper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .portal-tabs,
+  .tracking-stepper,
+  .bid-row-card {
+    grid-template-columns: 1fr;
+  }
+  .cabinet-trigger-btn span.cab-lbl-text {
+    display: none;
+  }
+}
