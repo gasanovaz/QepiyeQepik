@@ -1,33 +1,132 @@
 /* ==========================================================================
-   @QEPIYEQEPIK — USER CABINET (GOOGLE, APPLE ID, SMS OTP) & SYMMETRY SYSTEM
+   @QEPIYEQEPIK — HEADER SYMMETRY, ZERO-CROP HERO, USER CABINET & MOBILE UI
    ========================================================================== */
+
+/* 1. FIX TOP TICKER OVERLAP — STRICT VIEWPORT CLIPPING */
+.telemetry-ticker {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-badge {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+  padding: 0 14px;
+  font-size: 10.5px;
+  box-shadow: 10px 0 18px rgba(0, 0, 0, 0.55);
+}
+
+.ticker-viewport {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ticker-track {
+  padding-left: 18px;
+  gap: 36px;
+}
+
+/* 2. PERFECT SINGLE-LINE DESKTOP HEADER — ZERO RIGHT-EDGE CUTOFF */
+.site-header .container {
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.header-inner {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 70px;
+  width: 100%;
+}
+
+.brand-logo {
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 19px;
+}
+
+.brand-sub {
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-links a {
+  height: 36px;
+  padding: 0 11px;
+  font-size: 12.5px;
+  gap: 6px;
+  border-radius: 999px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+/* Uniform 36px pill controls in header */
+.theme-toggle {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: 999px;
+  gap: 6px;
+}
 
 .cabinet-trigger-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 14px;
-  border-radius: 10px;
+  gap: 6px;
+  height: 36px;
+  padding: 0 13px;
+  border-radius: 999px;
   background: var(--orange-subtle);
   border: 1px solid var(--border-orange);
   color: var(--orange-core);
   font-family: 'Inter', sans-serif;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
-  box-shadow: var(--shadow-card);
 }
 
 .cabinet-trigger-btn:hover {
-  background: var(--orange-gradient);
+  background: linear-gradient(135deg, #FF6A00 0%, #E64E00 100%);
   color: #FFFFFF;
   border-color: transparent;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-orange);
+  box-shadow: 0 6px 18px rgba(242, 88, 0, 0.28);
 }
 
 .cabinet-trigger-btn .cab-status-dot {
@@ -36,15 +135,184 @@
   border-radius: 50%;
   background: var(--emerald-ok);
   box-shadow: 0 0 8px var(--emerald-ok);
+  flex-shrink: 0;
 }
 
-/* Header responsive polish so all header controls stay on 1 symmetric line */
-.header-inner {
-  gap: 14px;
+.lang-switcher {
+  height: 36px;
+  padding: 3px;
+  border-radius: 999px;
 }
-.nav-links a {
-  padding: 8px 10px;
-  font-size: 13px;
+
+.lang-btn {
+  height: 28px;
+  padding: 0 9px;
+  font-size: 11px;
+}
+
+.header-actions .btn-primary {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  gap: 6px;
+}
+
+/* Mobile Quick-Nav Sub-bar (hidden on wide desktop, shown on <=1160px) */
+.mobile-quick-nav {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 16px 10px;
+  border-top: 1px solid var(--border-grid);
+  background: var(--bg-header);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-quick-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.mq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-grid);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.mq-pill svg {
+  width: 14px;
+  height: 14px;
+  color: var(--orange-core);
+}
+
+.mq-pill.mq-accent {
+  background: var(--orange-subtle);
+  border-color: var(--border-orange);
+  color: var(--orange-core);
+  font-weight: 700;
+}
+
+/* 3. HERO SYMMETRY & ZERO-CROP INSTAGRAM POSTER */
+.hero-section {
+  padding: 28px 0 52px;
+}
+
+.hero-grid {
+  grid-template-columns: 1fr 1.06fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.hero-title {
+  font-size: clamp(28px, 3.1vw, 42px);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.hero-lead {
+  font-size: 14.5px;
+  line-height: 1.56;
+  margin-bottom: 18px;
+}
+
+.ig-bio-card {
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.ig-bio-item {
+  height: 44px;
+  padding: 0 12px;
+  font-size: 12.5px;
+}
+
+.hero-cta-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-cta-row .btn-primary,
+.hero-cta-row .btn-outline {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  font-size: 12.5px;
+}
+
+.metric-box {
+  padding: 12px;
+  min-height: 76px;
+}
+
+.metric-val {
+  font-size: 20px;
+}
+
+/* Hero Right Telemetry Stage — Keep 4:5 Poster Uncropped */
+.telemetry-stage {
+  padding: 18px;
+}
+
+.hero-showcase-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.hero-post-frame {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  background: #090B10;
+  border-radius: 14px;
+}
+
+.hero-post-frame img,
+.lot-media img,
+.pinned-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  background: #090B10;
+}
+
+.hero-telemetry-details {
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.telemetry-spec-list {
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.t-spec-row {
+  padding-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.t-price-box {
+  padding: 12px 14px;
+}
+
+.t-price-val {
+  font-size: 23px;
 }
 
 /* Save Lot button on 9 real car cards */
@@ -58,7 +326,7 @@
   height: 30px;
   padding: 0 10px;
   border-radius: 8px;
-  background: rgba(12, 16, 23, 0.84);
+  background: rgba(12, 16, 23, 0.86);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.22);
   color: #FFFFFF;
@@ -77,7 +345,7 @@
   color: #FFFFFF;
 }
 
-/* USER PANEL / CLIENT PORTAL SECTION */
+/* 4. USER PANEL / CLIENT PORTAL SECTION */
 .cabinet-grid {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -111,7 +379,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--orange-gradient);
+  background: linear-gradient(90deg, #FF6A00, #E64E00);
 }
 
 .auth-provider-list {
@@ -194,6 +462,7 @@
   font-size: 13px;
   font-weight: 600;
   outline: none;
+  min-width: 0;
 }
 
 .sms-input:focus {
@@ -205,7 +474,7 @@
   padding: 0 14px;
   border-radius: 10px;
   border: none;
-  background: var(--orange-gradient);
+  background: linear-gradient(135deg, #FF6A00 0%, #E64E00 100%);
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
   font-size: 12.5px;
@@ -226,7 +495,6 @@
   display: grid;
 }
 
-/* PORTAL RIGHT PANEL */
 .portal-header-bar {
   display: flex;
   align-items: center;
@@ -247,7 +515,7 @@
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  background: var(--orange-gradient);
+  background: linear-gradient(135deg, #FF6A00 0%, #E64E00 100%);
   color: #FFFFFF;
   display: inline-flex;
   align-items: center;
@@ -255,13 +523,14 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  box-shadow: var(--shadow-orange);
+  box-shadow: 0 6px 16px rgba(242, 88, 0, 0.25);
+  flex-shrink: 0;
 }
 
 .portal-kpis {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -390,68 +659,340 @@
   color: var(--text-main);
 }
 
-/* MODAL OVERLAY FOR QUICK HEADER ACCESS */
-.qq-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(9, 11, 16, 0.72);
-  backdrop-filter: blur(8px);
-  z-index: 2000;
+/* 5. STICKY BOTTOM MOBILE ACTION BAR (FOR PHONES <= 768PX) */
+.mobile-bottom-bar {
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1500;
+  background: var(--bg-header);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-grid);
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.12);
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 8px;
 }
 
-.qq-modal-backdrop.open {
-  display: flex;
-}
-
-.qq-modal-dialog {
-  width: 100%;
-  max-width: 520px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-orange);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: var(--shadow-elevated);
-  position: relative;
-}
-
-.qq-modal-close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  border: 1px solid var(--border-grid);
-  background: var(--bg-card-alt);
-  color: var(--text-sub);
-  cursor: pointer;
+.mbb-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  gap: 6px;
+  height: 42px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
   font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--border-grid);
+  background: var(--bg-card-alt);
+  color: var(--text-main);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-@media (max-width: 1180px) {
-  .cabinet-grid {
-    grid-template-columns: 1fr;
+.mbb-btn svg {
+  width: 15px;
+  height: 15px;
+  color: var(--orange-core);
+  flex-shrink: 0;
+}
+
+.mbb-btn.mbb-primary {
+  background: linear-gradient(135deg, #FF6A00 0%, #E64E00 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(242, 88, 0, 0.3);
+}
+
+.mbb-btn.mbb-primary svg {
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   6. TABLET & MOBILE RESPONSIVE BREAKPOINTS (100% ZERO-OVERFLOW)
+   ========================================================================== */
+
+@media (max-width: 1220px) {
+  .nav-links {
+    display: none !important;
+  }
+  .mobile-quick-nav {
+    display: flex;
+  }
+  .hero-grid,
+  .cabinet-grid,
+  .calc-wrapper,
+  .hq-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lots-grid,
+  .pinned-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
   .tracking-stepper {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 720px) {
-  .portal-tabs,
-  .tracking-stepper,
-  .bid-row-card {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 66px;
   }
-  .cabinet-trigger-btn span.cab-lbl-text {
+
+  .container,
+  .site-header .container {
+    padding: 0 14px;
+  }
+
+  /* Compact Mobile Ticker */
+  .telemetry-ticker {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .ticker-badge {
+    padding: 0 10px;
+    font-size: 9.5px;
+  }
+
+  /* Clean Symmetric Mobile Header — Never overflows 360px-430px */
+  .header-inner {
+    height: 58px;
+    gap: 6px;
+  }
+
+  .brand-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 16.5px;
+  }
+
+  .brand-sub {
     display: none;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  /* Hide text inside theme & cabinet buttons on mobile so they act as sleek icon pills */
+  #theme-text,
+  .cabinet-trigger-btn .cab-lbl-text {
+    display: none;
+  }
+
+  .theme-toggle,
+  .cabinet-trigger-btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .lang-switcher {
+    height: 34px;
+    padding: 2px;
+  }
+
+  .lang-btn {
+    height: 28px;
+    padding: 0 7px;
+    font-size: 10.5px;
+  }
+
+  /* Phone CTA in top header hides on phone because Sticky Bottom Bar has Call + WhatsApp */
+  .header-actions > a.btn-primary {
+    display: none;
+  }
+
+  /* Hero Mobile Optimization */
+  .hero-section {
+    padding: 18px 0 36px;
+  }
+
+  .spec-pill {
+    font-size: 10px;
+    padding: 5px 11px;
+    margin-bottom: 12px;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .hero-title {
+    font-size: 27px;
+    line-height: 1.12;
+  }
+
+  .hero-lead {
+    font-size: 13.5px;
+    margin-bottom: 14px;
+  }
+
+  /* 2x3 Bio Grid on Mobile */
+  .ig-bio-card {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 7px;
+  }
+
+  .ig-bio-item {
+    height: 40px;
+    padding: 0 9px;
+    font-size: 11.5px;
+    gap: 7px;
+  }
+
+  .bio-icon-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .hero-cta-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* 2x2 Metrics Grid on Mobile (instead of 4 tall single-column boxes) */
+  .trust-metrics {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  .metric-box {
+    min-height: 68px;
+    padding: 11px 12px;
+  }
+
+  .metric-val {
+    font-size: 18px;
+  }
+
+  /* Hero Telemetry Stage on Mobile */
+  .telemetry-stage {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .stage-topbar {
+    font-size: 10px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .stage-lot-tabs {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px;
+  }
+
+  .stage-tab {
+    height: 34px;
+    font-size: 11.5px;
+  }
+
+  .hero-showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  /* Sections & Filter Tabs on Mobile */
+  .section-block {
+    padding: 42px 0;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 23px;
+  }
+
+  .filter-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    height: 36px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .lots-grid,
+  .pinned-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* User Cabinet & Calculator on Mobile */
+  .auth-card,
+  .portal-card,
+  .calc-wrapper,
+  .calc-invoice-panel,
+  .hq-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .portal-tabs {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .tracking-stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bid-row-card {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .bid-row-card > a {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .pill-selector {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px;
+  }
+
+  .select-pill {
+    font-size: 11px;
+    padding: 0 6px;
+    height: 38px;
+  }
+
+  .phone-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mobile-bottom-bar {
+    display: grid;
+  }
+}
+
+@media (max-width: 390px) {
+  .ig-bio-card {
+    grid-template-columns: 1fr !important;
   }
 }

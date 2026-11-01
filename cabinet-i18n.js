@@ -516,6 +516,63 @@
       '<svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
       '<span class="cab-lbl-text" id="header-cab-text">Şəxsi Kabinet</span>';
     actions.insertBefore(btn, langSw);
+
+    // Make header phone button sleek so it never clips on 1280px screens
+    const hdrPhoneSpan = actions.querySelector('a.btn-primary span');
+    if (hdrPhoneSpan) hdrPhoneSpan.textContent = '050 505 00 59';
+
+    // Inject Mobile Quick-Nav Sub-bar inside .site-header
+    const headerEl = document.querySelector('.site-header');
+    if (headerEl && !document.getElementById('mobile-quick-nav')) {
+      const mq = document.createElement('nav');
+      mq.className = 'mobile-quick-nav';
+      mq.id = 'mobile-quick-nav';
+      mq.innerHTML = `
+        <a href="#real-lots" class="mq-pill">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          <span id="mq-lots">Real Lotlar (9)</span>
+        </a>
+        <a href="#user-cabinet" class="mq-pill mq-accent">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span id="mq-cab">Şəxsi Kabinet</span>
+        </a>
+        <a href="#calculator" class="mq-pill">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
+          <span id="mq-calc">Hesablayıcı</span>
+        </a>
+        <a href="#import-process" class="mq-pill">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+          <span id="mq-proc">İdxal Prosesi</span>
+        </a>
+        <a href="#contacts" class="mq-pill">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="mq-off">Vurğun Residence</span>
+        </a>
+      `;
+      headerEl.appendChild(mq);
+    }
+
+    // Inject Sticky Bottom Mobile Action Bar for phones (<=768px)
+    if (!document.getElementById('mobile-bottom-bar')) {
+      const mbb = document.createElement('div');
+      mbb.className = 'mobile-bottom-bar';
+      mbb.id = 'mobile-bottom-bar';
+      mbb.innerHTML = `
+        <a href="tel:+994505050059" class="mbb-btn">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span id="mbb-call-txt">050 505 00 59</span>
+        </a>
+        <a href="#user-cabinet" class="mbb-btn">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span id="mbb-cab-txt">Kabinet</span>
+        </a>
+        <a href="https://wa.me/994505050059?text=Salam%20Dream%20Auto%20Vision%20(@qepiyeqepik)!" target="_blank" rel="noopener" class="mbb-btn mbb-primary">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span id="mbb-wa-txt">WhatsApp Sifariş</span>
+        </a>
+      `;
+      document.body.appendChild(mbb);
+    }
   }
 
   function injectCardSaveButtons() {
@@ -909,6 +966,15 @@
     setTxt('[data-i18n="nav_calc"]', t.nav_calc);
     setTxt('[data-i18n="nav_process"]', t.nav_process);
     setTxt('[data-i18n="nav_office"]', t.nav_office);
+
+    // Mobile Quick-Nav & Sticky Bottom Bar
+    setTxt('#mq-lots', t.nav_lots);
+    setTxt('#mq-cab', t.cab_btn);
+    setTxt('#mq-calc', t.nav_calc);
+    setTxt('#mq-proc', t.nav_process);
+    setTxt('#mq-off', t.nav_office);
+    setTxt('#mbb-cab-txt', t.cab_btn);
+    setTxt('#mbb-wa-txt', 'WhatsApp • ' + t.card_btn_order);
 
     // Hero
     setTxt('[data-i18n="hero_badge"]', t.hero_badge);
