@@ -1262,6 +1262,165 @@
         display: none;
       }
     }
+
+    /* USER PORTAL MODAL & DRAWER (GOOGLE / APPLE / SMS) */
+    .portal-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      height: 40px;
+      padding: 0 15px;
+      background: var(--orange-subtle);
+      border: 1px solid var(--border-orange);
+      color: var(--orange-core);
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .portal-btn:hover {
+      background: var(--orange-core);
+      color: #fff;
+    }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 11, 16, 0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+    .portal-modal {
+      width: 100%;
+      max-width: 520px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-orange);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+      position: relative;
+      color: var(--text-main);
+    }
+    .portal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border-grid);
+      background: var(--bg-card-alt);
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .auth-btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .auth-provider-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 48px;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border-grid);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .auth-provider-btn:hover {
+      border-color: var(--orange-core);
+      background: var(--orange-subtle);
+      transform: translateY(-1px);
+    }
+    .auth-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      margin: 14px 0;
+    }
+    .auth-divider::before,
+    .auth-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-grid);
+    }
+    .sms-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-grid);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .sms-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+    .cabinet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .cabinet-stat {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-grid);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+    .cabinet-stat strong {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      color: var(--orange-core);
+    }
+    .cabinet-stat span {
+      font-size: 11px;
+      color: var(--text-sub);
+    }
+    .cabinet-lot-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 14px;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-grid);
+      border-radius: 12px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
   </style>
   <link rel="stylesheet" href="cabinet.css" />
 </head>
@@ -1329,6 +1488,11 @@
       </ul>
 
       <div class="header-actions">
+        <!-- USER CABINET BUTTON (GOOGLE / APPLE / SMS) -->
+        <button class="portal-btn" onclick="openPortalModal()" id="header-portal-btn">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="nav_portal">Şəxsi Kabinet</span>
+        </button>
         <!-- THEME SWITCHER (OPENS IN WHITE MODE BY DEFAULT) -->
         <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Ağ / Tünd fonu dəyiş">
           <svg id="theme-svg" class="icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -1377,19 +1541,19 @@
               <div class="bio-icon-box">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
-              <span>397K+ Rəsmi İzləyici</span>
+              <span data-i18n="bio_2">397K+ Rəsmi İzləyici</span>
             </div>
             <div class="ig-bio-item">
               <div class="bio-icon-box">
                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
               </div>
-              <span>ABŞ • Koreya • Çin İdxalı</span>
+              <span data-i18n="bio_3">ABŞ • Koreya • Çin İdxalı</span>
             </div>
             <div class="ig-bio-item">
               <div class="bio-icon-box">
                 <svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
               </div>
-              <span>6–7-ci Günlər Açıqdır</span>
+              <span data-i18n="bio_4">6–7-ci Günlər Açıqdır</span>
             </div>
             <div class="ig-bio-item">
               <div class="bio-icon-box">
@@ -1401,7 +1565,7 @@
               <div class="bio-icon-box">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
-              <span>Vurğun Residence, 2-ci m.</span>
+              <span data-i18n="bio_6">Vurğun Residence, 2-ci m.</span>
             </div>
           </div>
 
@@ -1420,19 +1584,19 @@
         <div class="trust-metrics">
           <div class="metric-box">
             <div class="metric-val">2014<span>-dən</span></div>
-            <div class="metric-lbl">12 il rəsmi fəaliyyət</div>
+            <div class="metric-lbl" data-i18n="m_lbl_1">12 il rəsmi fəaliyyət</div>
           </div>
           <div class="metric-box">
             <div class="metric-val">397<span>K+</span></div>
-            <div class="metric-lbl">@qepiyeqepik ailəsi</div>
+            <div class="metric-lbl" data-i18n="m_lbl_2">@qepiyeqepik ailəsi</div>
           </div>
           <div class="metric-box">
             <div class="metric-val">50<span>%-dək</span></div>
-            <div class="metric-lbl">Bazarda daha sərfəli</div>
+            <div class="metric-lbl" data-i18n="m_lbl_3">Bazarda daha sərfəli</div>
           </div>
           <div class="metric-box">
             <div class="metric-val">7<span>/ 7</span></div>
-            <div class="metric-lbl">Şənbə–Bazar açıqdır</div>
+            <div class="metric-lbl" data-i18n="m_lbl_4">Şənbə–Bazar açıqdır</div>
           </div>
         </div>
       </div>
@@ -1503,16 +1667,16 @@
 
             <div>
               <div class="t-price-box">
-                <div class="t-price-lbl">TƏXMİNİ HƏRRAC QİYMƏTİ:</div>
+                <div class="t-price-lbl" data-i18n="hero_est_lbl">TƏXMİNİ HƏRRAC QİYMƏTİ:</div>
                 <div class="t-price-val" id="hero-real-price">5,900 - 6,900$</div>
               </div>
               <div class="hero-card-btns">
                 <a id="hero-real-ig" href="https://www.instagram.com/p/DfMTuJ7kf-S/" target="_blank" rel="noopener" class="btn-outline">
                   <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                  <span>IG Posta Bax</span>
+                  <span data-i18n="btn_ig_post">IG Posta Bax</span>
                 </a>
                 <a id="hero-real-wa" href="https://wa.me/994505050059?text=Salam!%202022%20Hyundai%20Sonata%20Limited%20(5,900-6,900$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                  <span>Sifariş Et</span>
+                  <span data-i18n="btn_order">Sifariş Et</span>
                 </a>
               </div>
             </div>
@@ -1534,10 +1698,10 @@
           <h2 class="section-title" data-i18n="lots_title">Son Günlərdə Paylaşılan Real Hərrac Lotları (9 Avtomobil)</h2>
         </div>
         <div class="filter-tabs">
-          <button class="filter-btn active" onclick="filterRealLots('all', this)">Hamısı (9 Real Lot)</button>
-          <button class="filter-btn" onclick="filterRealLots('budget', this)">Büdcə & Sedan ($3,900 – $6,900)</button>
-          <button class="filter-btn" onclick="filterRealLots('business', this)">Biznes Sinif ($14,000 – $35,000)</button>
-          <button class="filter-btn" onclick="filterRealLots('luxury', this)">VIP & Luxury ($80,000+)</button>
+          <button class="filter-btn active" onclick="filterRealLots('all', this)" data-i18n="flt_all">Hamısı (9 Real Lot)</button>
+          <button class="filter-btn" onclick="filterRealLots('budget', this)" data-i18n="flt_budget">Büdcə & Sedan ($3,900 – $6,900)</button>
+          <button class="filter-btn" onclick="filterRealLots('business', this)" data-i18n="flt_biz">Biznes Sinif ($14,000 – $35,000)</button>
+          <button class="filter-btn" onclick="filterRealLots('luxury', this)" data-i18n="flt_vip">VIP & Luxury ($80,000+)</button>
         </div>
       </div>
 
@@ -1572,16 +1736,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>5,900 - 6,900$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(6400, 2000, 'hybrid', '2022 Hyundai Sonata Limited Hybrid')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202022%20HYUNDAI%20SONATA%20LIMITED%20(5,900-6,900$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1617,16 +1781,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>30,000 - 35,000$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(32500, 2000, 'petrol', '2027 BMW 5 Series 530i')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202027%20BMW%205%20SERIES%20530I%20(30,000-35,000$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1662,16 +1826,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>14,000 - 18,000$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(16000, 3000, 'petrol', '2020 Land Rover Range Rover HSE')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202020%20RANGE%20ROVER%20HSE%20(14,000-18,000$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1707,16 +1871,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>17,500 - 19,500$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(18500, 2000, 'petrol', '2022 Mercedes-Benz E 350')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202022%20MERCEDES-BENZ%20E%20350%20(17,500-19,500$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1752,16 +1916,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>5,900 - 6,900$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(6400, 1600, 'petrol', '2021 Kia K5 GT Line')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202021%20KIA%20K5%20GT%20LINE%20(5,900-6,900$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1797,16 +1961,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>3,900 - 4,900$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(4400, 2000, 'petrol', '2024 Kia Forte GT Line')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202024%20KIA%20FORTE%20GT%20LINE%20(3,900-4,900$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1842,16 +2006,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>4,500 - 5,500$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(5000, 2000, 'petrol', '2024 Hyundai Elantra SEL')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202024%20HYUNDAI%20ELANTRA%20SEL%20(4,500-5,500$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1887,16 +2051,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>80,000 - 89,000$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(84500, 3000, 'petrol', '2026 Land Rover Range Rover')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202026%20LAND%20ROVER%20RANGE%20ROVER%20(80,000-89,000$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1932,16 +2096,16 @@
               </div>
             </div>
             <div class="lot-price-strip">
-              <span>Təxmini hərrac qiyməti:</span>
+              <span data-i18n="lot_est_lbl">Təxmini hərrac qiyməti:</span>
               <strong>18,000 - 22,000$</strong>
             </div>
             <div class="lot-actions">
               <button class="btn-outline" onclick="loadLotToCalc(20000, 2000, 'petrol', '2020 Mercedes-Benz GLE 350')">
                 <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
-                <span>Hesabla</span>
+                <span data-i18n="btn_calc_short">Hesabla</span>
               </button>
               <a href="https://wa.me/994505050059?text=Salam!%20Instagram-da%20payla%C5%9F%C4%B1lan%202020%20MERCEDES-BENZ%20GLE%20350%20(18,000-22,000$)%20lotu%20il%C9%99%20maraqlan%C4%B1ram." target="_blank" rel="noopener" class="btn-primary">
-                <span>Sifariş Et</span>
+                <span data-i18n="btn_order">Sifariş Et</span>
               </a>
             </div>
           </div>
@@ -1959,7 +2123,7 @@
             <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
             <span>PINNED HIGHLIGHTS // RƏSMİ BƏRKİDİLMİŞ PAYLAŞIMLAR</span>
           </div>
-          <h2 class="section-title">Amerikadan Avtomobil İdxalı Prosesi və Rəsmi Məlumat</h2>
+          <h2 class="section-title" data-i18n="pin_sec_title">Amerikadan Avtomobil İdxalı Prosesi və Rəsmi Məlumat</h2>
         </div>
         <p class="section-desc">
           @qepiyeqepik səhifəsinin rəsmi bərkidilmiş (Pinned) paylaşımları: 6 mərhələli ABŞ → Azərbaycan logistika xəritəsi, VIP müştəri təhvilləri və həftəsonu iş rejimi.
@@ -2027,7 +2191,7 @@
             <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg>
             <span>FINTECH PRECISION ENGINE // QƏPİYƏ-QƏPİK SMETA</span>
           </div>
-          <h2 class="section-title">Qəpiyə-Qəpik Xərc və Gömrük Hesablayıcısı</h2>
+          <h2 class="section-title" data-i18n="calc_sec_title">Qəpiyə-Qəpik Xərc və Gömrük Hesablayıcısı</h2>
         </div>
         <p class="section-desc">
           Yuxarıdakı real lotlardan birinin üzərində «Hesabla» düyməsini sıxın və ya istədiyiniz hərrac qiymətini seçin.
@@ -2138,7 +2302,7 @@
             <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>DREAM AUTO VISION LLC // HƏFTƏNİN 7 GÜNÜ AÇIQDIR</span>
           </div>
-          <h2 class="section-title">Vurğun Residence Ofisimiz və Rəsmi Əlaqə</h2>
+          <h2 class="section-title" data-i18n="hq_sec_title">Vurğun Residence Ofisimiz və Rəsmi Əlaqə</h2>
         </div>
         <p class="section-desc">
           6–7-ci günlər (Şənbə və Bazar) daxil olmaqla hər gün ofisimizə yaxınlaşıb rəsmi müqavilə ilə avtomobilinizi sifariş edə bilərsiniz.
@@ -2200,6 +2364,111 @@
       </div>
     </div>
   </section>
+
+
+  <!-- USER PORTAL MODAL (GOOGLE, APPLE ID, SMS OTP + CLIENT DASHBOARD) -->
+  <div class="modal-backdrop" id="portal-modal" onclick="if(event.target===this)closePortalModal()">
+    <div class="portal-modal">
+      <button class="portal-close" onclick="closePortalModal()" aria-label="Close">×</button>
+
+      <!-- VIEW 1: LOGIN SCREEN (GOOGLE, APPLE, SMS) -->
+      <div id="portal-auth-view">
+        <div class="spec-pill" style="margin-bottom:10px;">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          <span>DREAM AUTO VISION // ID AUTH</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:24px;margin-bottom:6px;" data-i18n="auth_title">Şəxsi Kabinetə Daxil Ol</h3>
+        <p style="font-size:13.5px;color:var(--text-sub);" data-i18n="auth_sub">
+          Hərrac mərclərinizi, Carfax hesabatlarını və konteynerinizin yolunu izləmək üçün giriş üsulunu seçin:
+        </p>
+
+        <div class="auth-btn-stack">
+          <!-- 1. GOOGLE LOGIN -->
+          <button class="auth-provider-btn" onclick="completeLogin('Google Hesabı')">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.8C6.2 7.2 8.9 5 12 5z"/>
+              <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6l3.7 2.9c2.2-2 3.7-5 3.7-8.7z"/>
+              <path fill="#FBBC05" d="M5.3 14.8c-.2-.8-.4-1.6-.4-2.5s.2-1.7.4-2.5L1.6 7C.6 9 0 11.2 0 13.5s.6 4.5 1.6 6.5l3.7-2.9z"/>
+              <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.1-6.7-5l-3.7 2.8C3.5 21.4 7.4 24 12 24z"/>
+            </svg>
+            <span data-i18n="auth_google">Google ilə davam et</span>
+          </button>
+
+          <!-- 2. APPLE LOGIN -->
+          <button class="auth-provider-btn" onclick="completeLogin('Apple ID')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            <span data-i18n="auth_apple">Apple ID ilə davam et</span>
+          </button>
+        </div>
+
+        <div class="auth-divider" data-i18n="auth_or">VƏ YA SMS KOD İLƏ</div>
+
+        <!-- 3. SMS OTP LOGIN -->
+        <div class="sms-box">
+          <label style="font-size:12px;font-weight:700;color:var(--text-sub);" data-i18n="auth_sms_lbl">Mobil nömrəniz (SMS təsdiq kodu üçün):</label>
+          <div class="sms-row">
+            <input type="tel" id="sms-phone-input" class="tracker-input" style="height:42px;" value="+994 50 " placeholder="+994 50 000 00 00" />
+            <button class="btn-primary" style="height:42px;padding:0 16px;" onclick="sendSmsOtp()" id="sms-send-btn" data-i18n="auth_sms_btn">SMS Kod Göndər</button>
+          </div>
+          <div id="sms-otp-step" style="display:none;margin-top:6px;">
+            <div class="sms-row">
+              <input type="text" id="sms-otp-code" class="tracker-input" style="height:42px;letter-spacing:0.25em;font-weight:700;" value="4829" placeholder="4 rəqəmli kod" />
+              <button class="btn-primary" style="height:42px;padding:0 16px;" onclick="completeLogin('SMS (+994)')">Təsdiqlə →</button>
+            </div>
+            <div style="font-size:11.5px;color:var(--emerald-ok);margin-top:6px;font-family:'JetBrains Mono',monospace;">✓ Test SMS kodu göndərildi: 4829</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: LOGGED-IN CLIENT DASHBOARD -->
+      <div id="portal-dashboard-view" style="display:none;">
+        <div class="spec-pill" style="margin-bottom:10px;">
+          <span>●</span>
+          <span id="portal-method-badge">VERIFIED CLIENT // GOOGLE</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:22px;margin-bottom:4px;">Xoş gəldiniz, Müştəri Paneli</h3>
+        <p style="font-size:13px;color:var(--text-sub);">Dream Auto Vision LLC • Şəxsi menecer: İsmayıl bəy (+994 50 505 00 59)</p>
+
+        <div class="cabinet-grid">
+          <div class="cabinet-stat">
+            <strong>3 Lot</strong>
+            <span>İzlənilən Hərrac</span>
+          </div>
+          <div class="cabinet-stat">
+            <strong>CLEAN ✓</strong>
+            <span>Carfax Statusu</span>
+          </div>
+          <div class="cabinet-stat">
+            <strong>0.00 ₼</strong>
+            <span>Gizli Komissiya</span>
+          </div>
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px;">Aktiv Seçilmiş Hərrac Lotlarınız (02–05 Noyabr):</div>
+        <div class="cabinet-lot-item">
+          <div>
+            <strong>2022 HYUNDAI SONATA LIMITED</strong>
+            <div style="font-size:11.5px;color:var(--text-sub);">02 Noyabr auction • 65,572 mil • 2.0L Hybrid</div>
+          </div>
+          <span class="lot-auction-tag">5,900 - 6,900$</span>
+        </div>
+        <div class="cabinet-lot-item">
+          <div>
+            <strong>2027 BMW 5 SERIES 530I</strong>
+            <div style="font-size:11.5px;color:var(--text-sub);">04 Noyabr auction • 14,242 mil • 2.0L Benzin</div>
+          </div>
+          <span class="lot-auction-tag">30,000 - 35,000$</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;">
+          <button class="btn-outline" onclick="logoutPortal()">Hesabdan Çıx</button>
+          <a href="https://wa.me/994505050059?text=Salam%20%C4%B0smay%C4%B1l%20b%C9%99y!%20%C5%9E%C9%99xsi%20kabinetd%C9%99n%20yaz%C4%B1ram%2C%20h%C9%99rracda%20i%C5%9Ftirak%20etm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" class="btn-primary">Menecerlə Əlaqə →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -2393,42 +2662,147 @@
       window.open(`https://wa.me/994505050059?text=${text}`, '_blank');
     }
 
+    // USER PORTAL FUNCTIONS (GOOGLE / APPLE / SMS)
+    function openPortalModal() {
+      document.getElementById('portal-modal').classList.add('open');
+    }
+    function closePortalModal() {
+      document.getElementById('portal-modal').classList.remove('open');
+    }
+    function sendSmsOtp() {
+      document.getElementById('sms-otp-step').style.display = 'block';
+    }
+    function completeLogin(providerName) {
+      document.getElementById('portal-auth-view').style.display = 'none';
+      document.getElementById('portal-dashboard-view').style.display = 'block';
+      document.getElementById('portal-method-badge').textContent = 'VERIFIED CLIENT // ' + providerName.toUpperCase();
+      document.querySelector('#header-portal-btn span').textContent = 'Kabinet (Aktiv ✓)';
+    }
+    function logoutPortal() {
+      document.getElementById('portal-dashboard-view').style.display = 'none';
+      document.getElementById('portal-auth-view').style.display = 'block';
+    }
+
     const i18n = {
       az: {
         nav_lots: 'Real Lotlar (9)',
         nav_calc: 'Hesablayıcı',
         nav_process: 'İdxal Prosesi',
         nav_office: 'Vurğun Residence',
+        nav_portal: 'Şəxsi Kabinet',
         hero_badge: '2014-CÜ İLDƏN XİDMƏTİNİZDƏYİK • 397,000+ İZLƏYİCİ',
         hero_title: 'Avtomobillərin Alınması və Çatdırılması <span class="accent">50%-dək Daha Ucuz.</span>',
         hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 ildir ABŞ, Koreya və Çin hərraclarından avtomobilləri <strong>qəpiyə-qəpik şəffaf invoysla</strong> Bakıya çatdırır. Həftənin 7 günü (6–7-ci günlər daxil) Vurğun Residence ofisimizdə xidmətinizdəyik!',
         hero_btn_lots: 'Son 10 Günün Real Lotları (9 Avto)',
         hero_btn_calc: 'Qəpiyə-Qəpik Hesablayıcı',
-        lots_title: 'Son Günlərdə Paylaşılan Real Hərrac Lotları (9 Avtomobil)'
+        m_lbl_1: '12 il rəsmi fəaliyyət',
+        m_lbl_2: '@qepiyeqepik ailəsi',
+        m_lbl_3: 'Bazarda daha sərfəli',
+        m_lbl_4: 'Şənbə–Bazar açıqdır',
+        bio_2: '397K+ Rəsmi İzləyici',
+        bio_3: 'ABŞ • Koreya • Çin İdxalı',
+        bio_4: '6–7-ci Günlər Açıqdır',
+        bio_6: 'Vurğun Residence, 2-ci m.',
+        hero_est_lbl: 'TƏXMİNİ HƏRRAC QİYMƏTİ:',
+        btn_ig_post: 'IG Posta Bax',
+        btn_order: 'Sifariş Et',
+        btn_calc_short: 'Hesabla',
+        lot_est_lbl: 'Təxmini hərrac qiyməti:',
+        flt_all: 'Hamısı (9 Real Lot)',
+        flt_budget: 'Büdcə & Sedan ($3,900 – $6,900)',
+        flt_biz: 'Biznes Sinif ($14,000 – $35,000)',
+        flt_vip: 'VIP & Luxury ($80,000+)',
+        lots_title: 'Son Günlərdə Paylaşılan Real Hərrac Lotları (9 Avtomobil)',
+        pin_sec_title: 'Amerikadan Avtomobil İdxalı Prosesi və Rəsmi Məlumat',
+        calc_sec_title: 'Qəpiyə-Qəpik Xərc və Gömrük Hesablayıcısı',
+        hq_sec_title: 'Vurğun Residence Ofisimiz və Rəsmi Əlaqə',
+        auth_title: 'Şəxsi Kabinetə Daxil Ol',
+        auth_sub: 'Hərrac mərclərinizi, Carfax hesabatlarını və konteynerinizin yolunu izləmək üçün giriş üsulunu seçin:',
+        auth_google: 'Google ilə davam et',
+        auth_apple: 'Apple ID ilə davam et',
+        auth_or: 'VƏ YA SMS KOD İLƏ',
+        auth_sms_lbl: 'Mobil nömrəniz (SMS təsdiq kodu üçün):',
+        auth_sms_btn: 'SMS Kod Göndər'
       },
       ru: {
         nav_lots: 'Реальные Лоты (9)',
         nav_calc: 'Калькулятор',
         nav_process: 'Процесс Импорта',
         nav_office: 'Vurğun Residence',
+        nav_portal: 'Личный Кабинет',
         hero_badge: 'РАБОТАЕМ С 2014 ГОДА (12 ЛЕТ) • 397 000+ ПОДПИСЧИКОВ',
         hero_title: 'Покупка и Доставка Автомобилей <span class="accent">До 50% Дешевле.</span>',
         hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 лет доставляем авто с аукционов США, Кореи и Китая строго по прозрачному инвойсу. Работаем 7 дней в неделю (включая субботу и воскресенье) в офисе Vurğun Residence!',
         hero_btn_lots: '9 реальных лотов из Instagram',
         hero_btn_calc: 'Калькулятор Qəpiyə-Qəpik',
-        lots_title: 'Реальные Автомобили из Instagram @qepiyeqepik за Последние Дни'
+        m_lbl_1: '12 лет на рынке',
+        m_lbl_2: 'Подписчиков в IG',
+        m_lbl_3: 'Дешевле рынка Баку',
+        m_lbl_4: 'Без выходных (Сб–Вс)',
+        bio_2: '397K+ Подписчиков в IG',
+        bio_3: 'Импорт: США • Корея • КНР',
+        bio_4: 'Работаем в Сб и Вс',
+        bio_6: 'Vurğun Residence, 2 эт.',
+        hero_est_lbl: 'ПРОГНОЗ ЦЕНЫ НА АУКЦИОНЕ:',
+        btn_ig_post: 'Пост в IG',
+        btn_order: 'Заказать',
+        btn_calc_short: 'Расчёт',
+        lot_est_lbl: 'Прогноз цены аукциона:',
+        flt_all: 'Все (9 Реальных Лотов)',
+        flt_budget: 'Седаны ($3,900 – $6,900)',
+        flt_biz: 'Бизнес-класс ($14,000 – $35,000)',
+        flt_vip: 'VIP & Люкс ($80,000+)',
+        lots_title: 'Реальные Автомобили из Instagram @qepiyeqepik за Последние Дни',
+        pin_sec_title: 'Процесс Импорта Авто из США и Официальная Информация',
+        calc_sec_title: 'Калькулятор Доставки и Растаможки Qəpiyə-Qəpik',
+        hq_sec_title: 'Офис в Vurğun Residence и Официальные Контакты',
+        auth_title: 'Вход в Личный Кабинет',
+        auth_sub: 'Выберите способ авторизации для отслеживания ставок аукциона, отчётов Carfax и контейнера:',
+        auth_google: 'Войти через Google',
+        auth_apple: 'Войти через Apple ID',
+        auth_or: 'ИЛИ ПО SMS-КОДУ',
+        auth_sms_lbl: 'Ваш мобильный номер (для получения SMS-кода):',
+        auth_sms_btn: 'Получить SMS'
       },
       en: {
         nav_lots: 'Real Lots (9)',
         nav_calc: 'Calculator',
         nav_process: 'Import Process',
         nav_office: 'Vurğun Residence',
+        nav_portal: 'Client Portal',
         hero_badge: 'SERVING YOU SINCE 2014 • 397,000+ FOLLOWERS',
         hero_title: 'Vehicle Purchasing & Delivery <span class="accent">Up to 50% Cheaper.</span>',
         hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 years of transparent auto import from USA, Korea, and China auctions. Open 7 days a week (including Saturdays & Sundays) at our Vurğun Residence office!',
         hero_btn_lots: 'All 9 Real Instagram Lots',
         hero_btn_calc: 'Qəpiyə-Qəpik Calculator',
-        lots_title: 'Real Auction Lots Posted on @qepiyeqepik in Recent Days'
+        m_lbl_1: '12 years in business',
+        m_lbl_2: '@qepiyeqepik followers',
+        m_lbl_3: 'Cheaper than market',
+        m_lbl_4: 'Open 7 days (Sat–Sun)',
+        bio_2: '397K+ Official Followers',
+        bio_3: 'USA • Korea • China Import',
+        bio_4: 'Open Sat & Sun (7/7)',
+        bio_6: 'Vurğun Residence, 2nd fl.',
+        hero_est_lbl: 'ESTIMATED AUCTION PRICE:',
+        btn_ig_post: 'View IG Post',
+        btn_order: 'Order Lot',
+        btn_calc_short: 'Calculate',
+        lot_est_lbl: 'Est. auction price:',
+        flt_all: 'All (9 Real Lots)',
+        flt_budget: 'Sedans ($3,900 – $6,900)',
+        flt_biz: 'Business ($14,000 – $35,000)',
+        flt_vip: 'VIP & Luxury ($80,000+)',
+        lots_title: 'Real Auction Lots Posted on @qepiyeqepik in Recent Days',
+        pin_sec_title: 'USA Vehicle Import Process & Official Highlights',
+        calc_sec_title: 'Qəpiyə-Qəpik Customs & Logistics Calculator',
+        hq_sec_title: 'Vurğun Residence Headquarters & Official Contacts',
+        auth_title: 'Client Portal Sign In',
+        auth_sub: 'Choose your sign-in method to track live auction bids, Carfax reports, and container telemetry:',
+        auth_google: 'Continue with Google',
+        auth_apple: 'Continue with Apple ID',
+        auth_or: 'OR VIA SMS OTP',
+        auth_sms_lbl: 'Mobile phone number (for SMS verification code):',
+        auth_sms_btn: 'Send SMS Code'
       }
     };
 
