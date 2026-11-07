@@ -1,5 +1,5 @@
 /* ==========================================================================
-   @QEPIYEQEPIK — FULL USER CABINET (GOOGLE / APPLE / SMS OTP) + 100% AZ/RU/EN I18N
+   AAA — AVTOAUKSION.AZ — FULL USER CABINET (GOOGLE / APPLE / SMS OTP) + 100% AZ/RU/EN I18N
    ========================================================================== */
 
 (function () {
@@ -9,7 +9,7 @@
     method: 'Google',
     name: 'Orxan Məmmədov',
     ident: 'orxan.m@gmail.com',
-    clientId: 'DAV-2026-8841',
+    clientId: 'AAA-2026-8841',
     deposit: '$1,500.00',
     savedLots: [
       {
@@ -34,31 +34,31 @@
       theme_light: 'Ağ Fon',
       theme_dark: 'Tünd Fon',
       cab_btn: 'Şəxsi Kabinet',
-      ticker_badge: '@QEPIYEQEPIK // REAL HƏRRAC LENTİ',
+      ticker_badge: 'AAA — AVTOAUKSION.AZ // REAL HƏRRAC LENTİ',
       nav_lots: 'Real Lotlar (9)',
       nav_calc: 'Hesablayıcı',
       nav_process: 'İdxal Prosesi',
       nav_office: 'Vurğun Residence',
       hero_badge: '2014-CÜ İLDƏN XİDMƏTİNİZDƏYİK • 397,000+ İZLƏYİCİ',
       hero_title: 'Avtomobillərin Alınması və Çatdırılması <span class="accent">50%-dək Daha Ucuz.</span>',
-      hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 ildir ABŞ, Koreya və Çin hərraclarından avtomobilləri <strong>qəpiyə-qəpik şəffaf invoysla</strong> Bakıya çatdırır. Həftənin 7 günü (6–7-ci günlər daxil) Vurğun Residence ofisimizdə xidmətinizdəyik!',
-      bio_1: 'Dream Auto Vision LLC',
+      hero_lead: '<strong>AAA — avtoauksion.az</strong> — 12 ildir ABŞ, Koreya və Çin hərraclarından avtomobilləri <strong>100% şəffaf rəsmi invoysla</strong> Bakıya çatdırır. Həftənin 7 günü (6–7-ci günlər daxil) Vurğun Residence ofisimizdə xidmətinizdəyik!',
+      bio_1: 'AAA — avtoauksion.az',
       bio_2: '397K+ Rəsmi İzləyici',
       bio_3: 'ABŞ • Koreya • Çin İdxalı',
       bio_4: '6–7-ci Günlər Açıqdır',
       bio_5: '(+994) 50 505 00 59',
       bio_6: 'Vurğun Residence, 2-ci m.',
       hero_btn_lots: 'Son 10 Günün Real Lotları (9 Avto)',
-      hero_btn_calc: 'Qəpiyə-Qəpik Hesablayıcı',
+      hero_btn_calc: 'AAA Gömrük Hesablayıcısı',
       m1_val: '2014<span>-dən</span>',
       m1_lbl: '12 il rəsmi fəaliyyət',
       m2_val: '397<span>K+</span>',
-      m2_lbl: '@qepiyeqepik ailəsi',
+      m2_lbl: 'avtoauksion.az ailəsi',
       m3_val: '50<span>%-dək</span>',
       m3_lbl: 'Bazarda daha sərfəli',
       m4_val: '7<span>/ 7</span>',
       m4_lbl: 'Şənbə–Bazar açıqdır',
-      stage_top_left: 'REAL INSTAGRAM LOTU //',
+      stage_top_left: 'REAL HƏRRAC LOTU //',
       stage_verified: 'CARFAX YOXLANILIB ✓',
       t_lbl_engine: 'Mühərrik:',
       t_lbl_miles: 'Orijinal Yürüş:',
@@ -69,7 +69,7 @@
       t_price_lbl: 'TƏXMİNİ HƏRRAC QİYMƏTİ:',
       t_btn_ig: 'IG Posta Bax',
       t_btn_order: 'Sifariş Et',
-      lots_pill: '100% REAL INSTAGRAM LENTİ // @QEPIYEQEPIK RƏSMİ ELANLARI',
+      lots_pill: '100% REAL HƏRRAC LENTİ // AAA — AVTOAUKSION.AZ RƏSMİ ELANLARI',
       lots_title: 'Son Günlərdə Paylaşılan Real Hərrac Lotları (9 Avtomobil)',
       f_all: 'Hamısı (9 Real Lot)',
       f_budget: 'Büdcə & Sedan ($3,900 – $6,900)',
@@ -89,7 +89,7 @@
       month_nov: 'Noyabr',
       pin_pill: 'PINNED HIGHLIGHTS // RƏSMİ BƏRKİDİLMİŞ PAYLAŞIMLAR',
       pin_title: 'Amerikadan Avtomobil İdxalı Prosesi və Rəsmi Məlumat',
-      pin_desc: '@qepiyeqepik səhifəsinin rəsmi bərkidilmiş (Pinned) paylaşımları: 6 mərhələli ABŞ → Azərbaycan logistika xəritəsi, VIP müştəri təhvilləri və həftəsonu iş rejimi.',
+      pin_desc: 'AAA — avtoauksion.az platformasının rəsmi bərkidilmiş (Pinned) paylaşımları: 6 mərhələli ABŞ → Azərbaycan logistika xəritəsi, VIP müştəri təhvilləri və həftəsonu iş rejimi.',
       pin1_tag: '01 // ABŞ → AZƏRBAYCAN (6 MƏRHƏLƏ)',
       pin1_title: 'Amerikadan Avtomobil İdxalı Prosesi',
       pin1_desc: '1. Hərracda udulma → 2. ABŞ daxili evakuator → 3. Liman terminalı → 4. Okean konteyneri → 5. Poti limanı → 6. Bakı Gömrük təhvili.',
@@ -123,7 +123,7 @@
       portal_kpi_lots: 'Seçilmiş Lotlar',
       portal_tab_1: 'Aktiv Stavkalar & Lotlar',
       portal_tab_2: 'Konteyner & VIN İzləmə (6 Mərhələ)',
-      portal_tab_3: 'Qəpiyə-Qəpik İnvoyslar',
+      portal_tab_3: 'AAA Rəsmi İnvoyslar',
       bid_live: 'CANLI STAVKA AKTİVDİR',
       bid_watch: 'İZLƏMƏ SİYAHISINDA',
       btn_open_calc: 'Smetaya Bax',
@@ -136,12 +136,12 @@
       st_5: 'Poti Terminalı',
       st_6: 'Bakı Gömrük',
       doc_carfax: 'Rəsmi Carfax Hesabatı (.PDF)',
-      doc_invoice: 'Qəpiyə-Qəpik Müqavilə İnvoysu',
-      inv_saved_title: 'Son Yadda Saxlanılan Qəpiyə-Qəpik Hesablamalar',
+      doc_invoice: 'AAA Müqavilə İnvoysu',
+      inv_saved_title: 'Son Yadda Saxlanılan AAA Hesablamalar',
       inv_saved_sub: 'Hesablayıcıda etdiyiniz bütün hesablamalar avtomatik olaraq Şəxsi Kabinetinizdə saxlanılır.',
       /* CALCULATOR */
-      calc_pill: 'FINTECH PRECISION ENGINE // QƏPİYƏ-QƏPİK SMETA',
-      calc_title: 'Qəpiyə-Qəpik Xərc və Gömrük Hesablayıcısı',
+      calc_pill: 'FINTECH PRECISION ENGINE // AAA — AVTOAUKSION.AZ SMETA',
+      calc_title: 'AAA — avtoauksion.az Xərc və Gömrük Hesablayıcısı',
       calc_desc: 'Yuxarıdakı real lotlardan birinin üzərində «Hesabla» düyməsini sıxın və ya istədiyiniz hərrac qiymətini seçin.',
       calc_sel_prefix: '● SEÇİLMİŞ LOT:',
       calc_sel_suffix: 'orta hərrac qiyməti',
@@ -155,34 +155,34 @@
       c_fuel_ev: 'Elektromobil',
       c_lbl_3: '3. Hərrac Alış Qiyməti (USD)',
       c_lbl_4: '4. Mühərrik Həcmi (sm³)',
-      inv_hdr_title: 'QƏPİYƏ-QƏPİK ŞƏFFAF HESABAT // 1$ = 1.70 ₼',
+      inv_hdr_title: 'AAA — AVTOAUKSION.AZ ŞƏFFAF HESABAT // 1$ = 1.70 ₼',
       inv_hdr_zero: '0% GİZLİ XƏRC ✓',
       inv_r1: 'Hərrac Alış Qiyməti (İnvoys):',
       inv_r2: 'Hərrac Rüsumu (Auction Fee):',
       inv_r3: 'ABŞ Daxili + Okean Konteyner + Bakı Çatdırılma:',
       inv_r4: 'AR Gömrük Rüsumu və Rəsmiləşdirmə (Təxmini):',
-      inv_r5: 'Dream Auto Vision Rəsmi Xidmət Haqqı:',
+      inv_r5: 'AAA — avtoauksion.az Rəsmi Xidmət Haqqı:',
       inv_tot_lbl: 'Bakıda Açar Təhvil Cəmi:',
       inv_mkt_lbl: 'Bakı Bazar Qiyməti:',
       inv_save_prefix: '50%-dək UCUZ: +',
       inv_save_suffix: ' ₼ QƏNAƏT',
       calc_wa_cta: 'Bu Hesabatı WhatsApp-a Göndər (+994 50 505 00 59)',
       /* CONTACTS */
-      hq_pill: 'DREAM AUTO VISION LLC // HƏFTƏNİN 7 GÜNÜ AÇIQDIR',
+      hq_pill: 'AAA — AVTOAUKSION.AZ // HƏFTƏNİN 7 GÜNÜ AÇIQDIR',
       hq_title: 'Vurğun Residence Ofisimiz və Rəsmi Əlaqə',
       hq_desc: '6–7-ci günlər (Şənbə və Bazar) daxil olmaqla hər gün ofisimizə yaxınlaşıb rəsmi müqavilə ilə avtomobilinizi sifariş edə bilərsiniz.',
       hq_addr_tag: 'RƏSMİ ÜNVAN // BAKI ŞƏHƏRİ',
       hq_addr_title: 'Səməd Vurğun küçəsi 110, Vurğun Residence, 2-ci mərtəbə',
       hq_addr_sub: 'Bakı Dövlət Sirkinin yaxınlığı • İş rejimi: Həftənin 7 günü (6–7-ci günlər fəaliyyət göstəririk!)',
-      hq_phones_lbl: 'Rəsmi Əlaqə Nömrələri (@qepiyeqepik):',
+      hq_phones_lbl: 'Rəsmi Əlaqə Nömrələri (AAA — avtoauksion.az):',
       call_word: 'Zəng →',
       lead_pill: 'CANLI AUKSİON SİFARİŞİ // 50%-DƏK QƏNAƏT',
       lead_title: '2–5 Noyabr Hərracında Hansı Lotda İştirak Edək?',
       lead_desc: 'Bəyəndiyiniz lotu (məs: 2022 Sonata Hybrid, 2027 BMW 530i, 2021 Kia K5, 2024 Elantra, 2022 E350) və ya büdcənizi yazın — Carfax hesabatını dərhal göndərək.',
       ph_model: 'Seçdiyiniz model (məs: 2022 Hyundai Sonata Limited / Kia K5)',
       ph_budget: 'Təxmini büdcəniz (məs: 6,000$ - 15,000$)',
-      lead_btn: 'WhatsApp-la Carfax və Qəpiyə-Qəpik Hesabat Al →',
-      footer_left: '© 2014–2026 <strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> • 12 İl Sizinlə!',
+      lead_btn: 'WhatsApp-la Carfax və AAA Hesabat Al →',
+      footer_left: '© 2014–2026 <strong>AAA — avtoauksion.az</strong> • 12 İl Sizinlə!',
       footer_right: 'Bakı ş., Səməd Vurğun küç. 110, Vurğun Residence, 2-ci mərtəbə • (+994) 50 505 00 59 / (+994) 50 227 80 41'
     },
 
@@ -190,31 +190,31 @@
       theme_light: 'Светлая',
       theme_dark: 'Тёмная',
       cab_btn: 'Личный Кабинет',
-      ticker_badge: '@QEPIYEQEPIK // ЛЕНТА РЕАЛЬНЫХ АУКЦИОНОВ',
+      ticker_badge: 'AAA — AVTOAUKSION.AZ // ЛЕНТА РЕАЛЬНЫХ АУКЦИОНОВ',
       nav_lots: 'Реальные Лоты (9)',
       nav_calc: 'Калькулятор',
       nav_process: 'Процесс Импорта',
       nav_office: 'Vurğun Residence',
       hero_badge: 'РАБОТАЕМ С 2014 ГОДА (12 ЛЕТ) • 397 000+ ПОДПИСЧИКОВ',
       hero_title: 'Покупка и Доставка Автомобилей <span class="accent">До 50% Дешевле.</span>',
-      hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 лет доставляем автомобили с аукционов США, Кореи и Китая в Баку <strong>по прозрачному инвойсу до копейки</strong>. Работаем 7 дней в неделю (включая субботу и воскресенье) в Vurğun Residence!',
-      bio_1: 'Dream Auto Vision LLC',
+      hero_lead: '<strong>AAA — avtoauksion.az</strong> — 12 лет доставляем автомобили с аукционов США, Кореи и Китая в Баку <strong>по прозрачному официальному инвойсу</strong>. Работаем 7 дней в неделю (включая субботу и воскресенье) в Vurğun Residence!',
+      bio_1: 'AAA — avtoauksion.az',
       bio_2: '397K+ Подписчиков',
       bio_3: 'Импорт: США • Корея • Китай',
       bio_4: 'Открыты в Субботу и Воскресенье',
       bio_5: '(+994) 50 505 00 59',
       bio_6: 'Vurğun Residence, 2-й этаж',
       hero_btn_lots: 'Реальные лоты за 10 дней (9 авто)',
-      hero_btn_calc: 'Калькулятор Qəpiyə-Qəpik',
+      hero_btn_calc: 'Калькулятор AAA — avtoauksion.az',
       m1_val: 'С 2014<span> г.</span>',
       m1_lbl: '12 лет официальной работы',
       m2_val: '397<span>K+</span>',
-      m2_lbl: 'Семья @qepiyeqepik',
+      m2_lbl: 'Семья avtoauksion.az',
       m3_val: 'До 50<span>%</span>',
       m3_lbl: 'Выгоднее рынка Баку',
       m4_val: '7<span> / 7</span>',
       m4_lbl: 'Работаем без выходных',
-      stage_top_left: 'РЕАЛЬНЫЙ ЛОТ INSTAGRAM //',
+      stage_top_left: 'РЕАЛЬНЫЙ ЛОТ АУКЦИОНА //',
       stage_verified: 'CARFAX ПРОВЕРЕН ✓',
       t_lbl_engine: 'Двигатель:',
       t_lbl_miles: 'Оригинальный пробег:',
@@ -225,7 +225,7 @@
       t_price_lbl: 'ОРИЕНТИРОВОЧНАЯ ЦЕНА АУКЦИОНА:',
       t_btn_ig: 'Пост в IG',
       t_btn_order: 'Заказать',
-      lots_pill: '100% РЕАЛЬНАЯ ЛЕНТА INSTAGRAM // ОФИЦИАЛЬНЫЕ ЛОТЫ @QEPIYEQEPIK',
+      lots_pill: '100% РЕАЛЬНАЯ ЛЕНТА АУКЦИОНОВ // ОФИЦИАЛЬНЫЕ ЛОТЫ AAA — AVTOAUKSION.AZ',
       lots_title: 'Реальные Аукционные Лоты за Последние Дни (9 Автомобилей)',
       f_all: 'Все (9 реальных лотов)',
       f_budget: 'Бюджет и Седаны ($3,900 – $6,900)',
@@ -245,7 +245,7 @@
       month_nov: 'Ноября',
       pin_pill: 'PINNED HIGHLIGHTS // ЗАКРЕПЛЕННЫЕ ПУБЛИКАЦИИ',
       pin_title: 'Процесс Импорта Автомобилей из США и Официальная Информация',
-      pin_desc: 'Закрепленные публикации @qepiyeqepik: 6 этапов логистики США → Азербайджан, выдача VIP-автомобилей клиентам и работа в выходные дни.',
+      pin_desc: 'Закрепленные публикации AAA — avtoauksion.az: 6 этапов логистики США → Азербайджан, выдача VIP-автомобилей клиентам и работа в выходные дни.',
       pin1_tag: '01 // США → АЗЕРБАЙДЖАН (6 ЭТАПОВ)',
       pin1_title: 'Процесс Импорта Автомобилей из США',
       pin1_desc: '1. Выигрыш лота → 2. Эвакуатор по США → 3. Портовый терминал → 4. Океанский контейнер → 5. Порт Поти → 6. Таможня Баку.',
@@ -279,11 +279,11 @@
       portal_kpi_lots: 'Избранные Лоты',
       portal_tab_1: 'Активные Ставки и Лоты',
       portal_tab_2: 'Трекинг Контейнера (6 Этапов)',
-      portal_tab_3: 'Инвойсы Qəpiyə-Qəpik',
+      portal_tab_3: 'Инвойсы AAA — avtoauksion.az',
       bid_live: 'СТАВКА АКТИВНА',
       bid_watch: 'В ИЗБРАННОМ',
       btn_open_calc: 'В смету',
-      track_header: 'АКТИВНЫЙ КОНТЕЙНЕР: MSCU8492104 • VIN: 5NPEH4J24NH148920 (2022 HYUNDAI SONATA HYBRID)',
+      track_header: 'АКТИВНЫЙ КОНТЕYНЕР: MSCU8492104 • VIN: 5NPEH4J24NH148920 (2022 HYUNDAI SONATA HYBRID)',
       track_eta: 'Ожидаемая выдача в Баку: 18 Ноября',
       st_1: 'Выигран в США',
       st_2: 'Эвакуатор США',
@@ -292,12 +292,12 @@
       st_5: 'Терминал Поти',
       st_6: 'Таможня Баку',
       doc_carfax: 'Официальный отчёт Carfax (.PDF)',
-      doc_invoice: 'Инвойс договора Qəpiyə-Qəpik',
-      inv_saved_title: 'Сохранённые Расчёты Qəpiyə-Qəpik',
+      doc_invoice: 'Инвойс договора AAA — avtoauksion.az',
+      inv_saved_title: 'Сохранённые Расчёты AAA — avtoauksion.az',
       inv_saved_sub: 'Все расчёты из калькулятора автоматически сохраняются в вашем Личном Кабинете.',
       /* CALCULATOR */
-      calc_pill: 'FINTECH PRECISION ENGINE // ТОЧНАЯ СМЕТА ДО КОПЕЙКИ',
-      calc_title: 'Калькулятор Расходов и Таможни «Qəpiyə-Qəpik»',
+      calc_pill: 'FINTECH PRECISION ENGINE // ТОЧНАЯ СМЕТА AAA — AVTOAUKSION.AZ',
+      calc_title: 'Калькулятор Расходов и Таможни «AAA — avtoauksion.az»',
       calc_desc: 'Нажмите «Рассчитать» на любом из 9 реальных лотов выше или укажите желаемую ставку аукциона.',
       calc_sel_prefix: '● ВЫБРАННЫЙ ЛОТ:',
       calc_sel_suffix: 'средняя ставка аукциона',
@@ -311,34 +311,34 @@
       c_fuel_ev: 'Электромобиль',
       c_lbl_3: '3. Ставка Покупки на Аукционе (USD)',
       c_lbl_4: '4. Объём Двигателя (см³)',
-      inv_hdr_title: 'ПРОЗРАЧНАЯ СМЕТА QƏPİYƏ-QƏPİK // 1$ = 1.70 ₼',
+      inv_hdr_title: 'ПРОЗРАЧНАЯ СМЕТА AAA — AVTOAUKSION.AZ // 1$ = 1.70 ₼',
       inv_hdr_zero: '0% СКРЫТЫХ КОМИССИЙ ✓',
       inv_r1: 'Стоимость лота на аукционе (Инвойс):',
       inv_r2: 'Сбор аукциона Copart / IAAI (Auction Fee):',
       inv_r3: 'Логистика по США + Океанский контейнер + Доставка в Баку:',
       inv_r4: 'Таможенная пошлина и оформление в АР (Ориентировочно):',
-      inv_r5: 'Официальная комиссия Dream Auto Vision:',
+      inv_r5: 'Официальная комиссия AAA — avtoauksion.az:',
       inv_tot_lbl: 'Итого Под Ключ в Баку:',
       inv_mkt_lbl: 'Рыночная цена в Баку:',
       inv_save_prefix: 'ДО 50% ДЕШЕВЛЕ: +',
       inv_save_suffix: ' ₼ ВЫГОДЫ',
       calc_wa_cta: 'Отправить этот расчёт в WhatsApp (+994 50 505 00 59)',
       /* CONTACTS */
-      hq_pill: 'DREAM AUTO VISION LLC // ОТКРЫТЫ 7 ДНЕЙ В НЕДЕЛЮ',
+      hq_pill: 'AAA — AVTOAUKSION.AZ // ОТКРЫТЫ 7 ДНЕЙ В НЕДЕЛЮ',
       hq_title: 'Наш Офис в Vurğun Residence и Официальные Контакты',
       hq_desc: 'Приезжайте в наш офис в любой день недели (включая субботу и воскресенье) для подбора авто и заключения официального договора.',
       hq_addr_tag: 'ОФИЦИАЛЬНЫЙ АДРЕС // Г. БАКУ',
       hq_addr_title: 'ул. Самеда Вургуна 110, Vurğun Residence, 2-й этаж',
       hq_addr_sub: 'Рядом с Бакинским государственным цирком • График: 7 дней в неделю (работаем в субботу и воскресенье!)',
-      hq_phones_lbl: 'Официальные телефоны (@qepiyeqepik):',
+      hq_phones_lbl: 'Официальные телефоны (AAA — avtoauksion.az):',
       call_word: 'Позвонить →',
       lead_pill: 'ЗАКАЗ С ЖИВОГО АУКЦИОНА // ВЫГОДА ДО 50%',
       lead_title: 'В каком лоте 2–5 ноября вы хотите участвовать?',
       lead_desc: 'Укажите понравившийся лот (например: 2022 Sonata Hybrid, 2027 BMW 530i, 2021 Kia K5, 2024 Elantra, 2022 E350) или ваш бюджет — мы сразу пришлём Carfax.',
       ph_model: 'Желаемая модель (напр.: 2022 Hyundai Sonata Limited / Kia K5)',
       ph_budget: 'Ориентировочный бюджет (напр.: 6,000$ - 15,000$)',
-      lead_btn: 'Получить Carfax и расчёт Qəpiyə-Qəpik в WhatsApp →',
-      footer_left: '© 2014–2026 <strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> • 12 Лет с Вами!',
+      lead_btn: 'Получить Carfax и расчёт AAA — avtoauksion.az в WhatsApp →',
+      footer_left: '© 2014–2026 <strong>AAA — avtoauksion.az</strong> • 12 Лет с Вами!',
       footer_right: 'г. Баку, ул. Самеда Вургуна 110, Vurğun Residence, 2-й этаж • (+994) 50 505 00 59 / (+994) 50 227 80 41'
     },
 
@@ -346,31 +346,31 @@
       theme_light: 'Light Mode',
       theme_dark: 'Dark Mode',
       cab_btn: 'Client Portal',
-      ticker_badge: '@QEPIYEQEPIK // LIVE AUCTION FEED',
+      ticker_badge: 'AAA — AVTOAUKSION.AZ // LIVE AUCTION FEED',
       nav_lots: 'Real Lots (9)',
       nav_calc: 'Calculator',
       nav_process: 'Import Process',
       nav_office: 'Vurğun Residence',
       hero_badge: 'SERVING YOU SINCE 2014 • 397,000+ FOLLOWERS',
       hero_title: 'Vehicle Purchasing & Delivery <span class="accent">Up to 50% Cheaper.</span>',
-      hero_lead: '<strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> — 12 years of importing vehicles from USA, Korea, and China auctions to Baku with <strong>penny-by-penny transparent invoices</strong>. Open 7 days a week (including Saturdays & Sundays) at Vurğun Residence!',
-      bio_1: 'Dream Auto Vision LLC',
+      hero_lead: '<strong>AAA — avtoauksion.az</strong> — 12 years of importing vehicles from USA, Korea, and China auctions to Baku with <strong>100% transparent official invoices</strong>. Open 7 days a week (including Saturdays & Sundays) at Vurğun Residence!',
+      bio_1: 'AAA — avtoauksion.az',
       bio_2: '397K+ Official Followers',
       bio_3: 'USA • Korea • China Import',
       bio_4: 'Open Saturdays & Sundays',
       bio_5: '(+994) 50 505 00 59',
       bio_6: 'Vurğun Residence, 2nd Floor',
       hero_btn_lots: '9 Real Lots from Last 10 Days',
-      hero_btn_calc: 'Qəpiyə-Qəpik Calculator',
+      hero_btn_calc: 'AAA — avtoauksion.az Calculator',
       m1_val: 'Since <span>2014</span>',
       m1_lbl: '12 years of official service',
       m2_val: '397<span>K+</span>',
-      m2_lbl: '@qepiyeqepik community',
+      m2_lbl: 'avtoauksion.az community',
       m3_val: 'Up to <span>50%</span>',
       m3_lbl: 'Below local market price',
       m4_val: '7<span> / 7</span>',
       m4_lbl: 'Open Saturday & Sunday',
-      stage_top_left: 'REAL INSTAGRAM LOT //',
+      stage_top_left: 'REAL AUCTION LOT //',
       stage_verified: 'CARFAX VERIFIED ✓',
       t_lbl_engine: 'Engine:',
       t_lbl_miles: 'Original Mileage:',
@@ -381,7 +381,7 @@
       t_price_lbl: 'ESTIMATED AUCTION PRICE:',
       t_btn_ig: 'View IG Post',
       t_btn_order: 'Order Now',
-      lots_pill: '100% REAL INSTAGRAM FEED // OFFICIAL @QEPIYEQEPIK LISTINGS',
+      lots_pill: '100% REAL AUCTION FEED // OFFICIAL AAA — AVTOAUKSION.AZ LISTINGS',
       lots_title: 'Real Auction Lots Posted in Recent Days (9 Vehicles)',
       f_all: 'All Lots (9 Real Cars)',
       f_budget: 'Budget & Sedans ($3,900 – $6,900)',
@@ -401,7 +401,7 @@
       month_nov: 'November',
       pin_pill: 'PINNED HIGHLIGHTS // OFFICIAL PINNED POSTS',
       pin_title: 'USA Vehicle Import Process & Official Highlights',
-      pin_desc: 'Official pinned highlights from @qepiyeqepik: 6-stage USA → Azerbaijan logistics roadmap, VIP client handovers, and 7-day weekend schedule.',
+      pin_desc: 'Official pinned highlights from AAA — avtoauksion.az: 6-stage USA → Azerbaijan logistics roadmap, VIP client handovers, and 7-day weekend schedule.',
       pin1_tag: '01 // USA → AZERBAIJAN (6 STAGES)',
       pin1_title: 'Vehicle Import Process from USA',
       pin1_desc: '1. Auction win → 2. US inland towing → 3. Port terminal → 4. Ocean container → 5. Poti port → 6. Baku Customs handover.',
@@ -417,7 +417,7 @@
       /* USER CABINET */
       cab_pill: 'CLIENT PORTAL // OFFICIAL USER CABINET (GOOGLE • APPLE • SMS)',
       cab_title: 'Client Portal, Live Auction Bids & Container Tracking',
-      cab_desc: 'Sign in with Google, Apple ID, or SMS OTP (+994): manage saved auction lots, inspect penny-by-penny invoices, and track your container to Baku.',
+      cab_desc: 'Sign in with Google, Apple ID, or SMS OTP (+994): manage saved auction lots, inspect transparent official invoices, and track your container to Baku.',
       auth_box_tag: 'SECURE AUTHENTICATION // 3 OFFICIAL METHODS',
       auth_box_title: 'Sign In to Client Portal',
       auth_box_sub: 'Activate your personal dashboard in seconds via Google, Apple ID, or mobile SMS code:',
@@ -435,7 +435,7 @@
       portal_kpi_lots: 'Saved Lots',
       portal_tab_1: 'Active Bids & Saved Lots',
       portal_tab_2: 'Container & VIN Tracker (6 Stages)',
-      portal_tab_3: 'Qəpiyə-Qəpik Invoices',
+      portal_tab_3: 'AAA — avtoauksion.az Invoices',
       bid_live: 'LIVE BID ACTIVE',
       bid_watch: 'WATCHLISTED',
       btn_open_calc: 'Estimate',
@@ -448,12 +448,12 @@
       st_5: 'Poti Terminal',
       st_6: 'Baku Customs',
       doc_carfax: 'Official Carfax Report (.PDF)',
-      doc_invoice: 'Qəpiyə-Qəpik Contract Invoice',
-      inv_saved_title: 'Saved Qəpiyə-Qəpik Cost Estimates',
+      doc_invoice: 'AAA — avtoauksion.az Contract Invoice',
+      inv_saved_title: 'Saved AAA — avtoauksion.az Cost Estimates',
       inv_saved_sub: 'Every calculation you run in the calculator is automatically synced to your Client Portal.',
       /* CALCULATOR */
-      calc_pill: 'FINTECH PRECISION ENGINE // PENNY-BY-PENNY ESTIMATE',
-      calc_title: 'Qəpiyə-Qəpik Cost & Customs Calculator',
+      calc_pill: 'FINTECH PRECISION ENGINE // AAA — AVTOAUKSION.AZ ESTIMATE',
+      calc_title: 'AAA — avtoauksion.az Cost & Customs Calculator',
       calc_desc: 'Click "Calculate" on any of the 9 real lots above or adjust the auction winning bid slider below.',
       calc_sel_prefix: '● SELECTED LOT:',
       calc_sel_suffix: 'average auction estimate',
@@ -467,34 +467,34 @@
       c_fuel_ev: 'Electric (EV)',
       c_lbl_3: '3. Auction Winning Bid (USD)',
       c_lbl_4: '4. Engine Displacement (cc)',
-      inv_hdr_title: 'TRANSPARENT QƏPİYƏ-QƏPİK BREAKDOWN // 1$ = 1.70 ₼',
+      inv_hdr_title: 'TRANSPARENT AAA — AVTOAUKSION.AZ BREAKDOWN // 1$ = 1.70 ₼',
       inv_hdr_zero: '0% HIDDEN FEES ✓',
       inv_r1: 'Auction Purchase Price (Invoice):',
       inv_r2: 'Copart / IAAI Auction Fee:',
       inv_r3: 'US Inland Tow + Ocean Container + Baku Delivery:',
       inv_r4: 'Azerbaijan Customs Duty & Clearance (Est.):',
-      inv_r5: 'Dream Auto Vision Official Service Fee:',
+      inv_r5: 'AAA — avtoauksion.az Official Service Fee:',
       inv_tot_lbl: 'Turnkey Total in Baku:',
       inv_mkt_lbl: 'Baku Local Market Price:',
       inv_save_prefix: 'UP TO 50% CHEAPER: +',
       inv_save_suffix: ' ₼ SAVED',
       calc_wa_cta: 'Send This Estimate to WhatsApp (+994 50 505 00 59)',
       /* CONTACTS */
-      hq_pill: 'DREAM AUTO VISION LLC // OPEN 7 DAYS A WEEK',
+      hq_pill: 'AAA — AVTOAUKSION.AZ // OPEN 7 DAYS A WEEK',
       hq_title: 'Vurğun Residence Office & Official Contacts',
       hq_desc: 'Visit our office any day of the week (including Saturdays and Sundays) to sign an official import contract.',
       hq_addr_tag: 'OFFICIAL ADDRESS // BAKU, AZERBAIJAN',
       hq_addr_title: '110 Samad Vurgun St, Vurğun Residence, 2nd Floor',
       hq_addr_sub: 'Near Baku State Circus • Working hours: 7 days a week (Open Saturdays & Sundays!)',
-      hq_phones_lbl: 'Official Hotlines (@qepiyeqepik):',
+      hq_phones_lbl: 'Official Hotlines (AAA — avtoauksion.az):',
       call_word: 'Call →',
       lead_pill: 'LIVE AUCTION ORDER // SAVE UP TO 50%',
       lead_title: 'Which Nov 2–5 Auction Lot Would You Like to Bid On?',
       lead_desc: 'Enter your preferred lot (e.g. 2022 Sonata Hybrid, 2027 BMW 530i, 2021 Kia K5, 2024 Elantra, 2022 E350) or budget — we will send the Carfax right away.',
       ph_model: 'Preferred model (e.g. 2022 Hyundai Sonata Limited / Kia K5)',
       ph_budget: 'Estimated budget (e.g. $6,000 - $15,000)',
-      lead_btn: 'Get Carfax & Qəpiyə-Qəpik Estimate via WhatsApp →',
-      footer_left: '© 2014–2026 <strong>Dream Auto Vision LLC (@qepiyeqepik)</strong> • 12 Years With You!',
+      lead_btn: 'Get Carfax & AAA — avtoauksion.az Estimate via WhatsApp →',
+      footer_left: '© 2014–2026 <strong>AAA — avtoauksion.az</strong> • 12 Years With You!',
       footer_right: '110 Samad Vurgun St, Vurğun Residence, 2nd Floor, Baku • (+994) 50 505 00 59 / (+994) 50 227 80 41'
     }
   };
@@ -566,7 +566,7 @@
           <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span id="mbb-cab-txt">Kabinet</span>
         </a>
-        <a href="https://wa.me/994505050059?text=Salam%20Dream%20Auto%20Vision%20(@qepiyeqepik)!" target="_blank" rel="noopener" class="mbb-btn mbb-primary">
+        <a href="https://wa.me/994505050059?text=Salam%20AAA%20-%20avtoauksion.az!" target="_blank" rel="noopener" class="mbb-btn mbb-primary">
           <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           <span id="mbb-wa-txt">WhatsApp Sifariş</span>
         </a>
@@ -731,7 +731,7 @@
                 <div class="portal-kpis">
                   <div class="portal-kpi-pill">
                     <span id="pkpi-id-lbl">Müştəri Kodu</span>
-                    <strong id="pkpi-id-val">#DAV-2026-8841</strong>
+                    <strong id="pkpi-id-val">#AAA-2026-8841</strong>
                   </div>
                   <div class="portal-kpi-pill">
                     <span id="pkpi-dep-lbl">Hərrac Depoziti</span>
@@ -753,7 +753,7 @@
                   2. Konteyner & VIN İzləmə
                 </button>
                 <button type="button" class="portal-tab-btn" onclick="window.qqSwitchPortalTab(2, this)" id="ptab-3">
-                  3. Qəpiyə-Qəpik İnvoyslar
+                  3. AAA Rəsmi İnvoyslar
                 </button>
               </div>
 
@@ -805,16 +805,16 @@
                     📄 Rəsmi Carfax Hesabatı (.PDF)
                   </a>
                   <a href="#calculator" class="btn-primary" id="doc-inv-btn">
-                    🧾 Qəpiyə-Qəpik Müqavilə İnvoysu
+                    🧾 AAA Müqavilə İnvoysu
                   </a>
                 </div>
               </div>
 
-              <!-- TAB PANE 2: SAVED INVOICES -->
+              <!-- TAB PANE 2: SAVED INVOICES & 72H PRO ESCROW SHIELD -->
               <div class="portal-tab-pane" id="portal-pane-2">
                 <div style="background:var(--bg-card-alt);border:1px solid var(--border-grid);border-radius:14px;padding:16px;">
                   <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px;" id="inv-saved-title">
-                    Son Yadda Saxlanılan Qəpiyə-Qəpik Hesablamalar
+                    Son Yadda Saxlanılan AAA Hesablamalar
                   </div>
                   <p style="font-size:12.5px;color:var(--text-sub);margin-bottom:12px;" id="inv-saved-sub">
                     Hesablayıcıda etdiyiniz bütün hesablamalar avtomatik olaraq Şəxsi Kabinetinizdə saxlanılır.
@@ -823,6 +823,34 @@
                     <span>2022 HYUNDAI SONATA HYBRID ($6,400 + Gömrük + Yol)</span>
                     <strong style="color:var(--orange-core);">18,973.70 ₼ (Açar Təhvil)</strong>
                   </div>
+                </div>
+
+                <!-- 72-HOUR PRO GUARANTEE & 20/80 ESCROW LEDGER SHIELD -->
+                <div id="qq-pro-shield-card" style="margin-top:12px;background:var(--bg-card-alt);border:1px solid var(--border-orange);border-radius:14px;padding:16px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+                    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--orange-core);" id="qq-pro-shield-tag">
+                      🛡️ AAA PRO BIDDER & CARFAX SHIELD // 72-SAATLIQ ZƏMANƏT (20% / 80% ESCROW)
+                    </div>
+                    <span id="qq-pro-status-pill" style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:rgba(16,185,129,0.14);color:var(--emerald-ok);">
+                      ● PRO AKTİV • 72h Hold
+                    </span>
+                  </div>
+                  <p id="qq-pro-shield-desc" style="font-size:12.5px;color:var(--text-sub);margin-bottom:12px;line-height:1.5;">
+                    Apple / Stripe 72 saatlıq (3 gün) geri qaytarma qaydası: ödənişdən dərhal sonra <strong>20% Carfax & Bid krediti (20 kredit)</strong> aktivləşir, <strong>80% (80 kredit)</strong> isə 72 saatlıq Escrow qorunmasında saxlanılır. 3 gün ərzində 1 kliklə tam geri qaytarma zamanı PRO dərhal deaktiv edilir.
+                  </p>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:12px;">
+                    <div style="padding:10px 12px;background:var(--bg-card);border:1px solid var(--border-grid);border-radius:10px;">
+                      <div style="font-size:11px;color:var(--text-sub);" id="qq-pro-avail-lbl">20% Dərhal Aktiv (72s)</div>
+                      <strong style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--emerald-ok);" id="qq-pro-avail-val">20 / 20 Carfax Krediti</strong>
+                    </div>
+                    <div style="padding:10px 12px;background:var(--bg-card);border:1px solid var(--border-grid);border-radius:10px;">
+                      <div style="font-size:11px;color:var(--text-sub);" id="qq-pro-escrow-lbl">80% Escrow Hold (72s sonra)</div>
+                      <strong style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--orange-core);" id="qq-pro-escrow-val">80 Kredit (Hold 71s 58d)</strong>
+                    </div>
+                  </div>
+                  <button type="button" id="qq-pro-refund-btn" onclick="window.qqToggleProRefund()" class="btn-outline" style="width:100%;justify-content:center;font-size:12px;height:38px;">
+                    ⚡ 1-Kliklə 72 Saatlıq Geri Qaytarma & PRO Deaktiv Et
+                  </button>
                 </div>
               </div>
             </div>
@@ -843,7 +871,7 @@
 
     wrap.innerHTML = userSession.savedLots
       .map(
-        (item) => `
+        (item, idx) => `
         <div class="bid-row-card">
           <img src="${item.img}" alt="${item.title}" />
           <div>
@@ -857,13 +885,219 @@
               ${item.bid}
             </div>
           </div>
-          <a href="#calculator" class="btn-outline" style="height:36px;padding:0 12px;font-size:12px;">
+          <a href="#calculator" onclick="window.qqLoadSavedLot(${idx}); return false;" class="btn-outline" style="height:36px;padding:0 12px;font-size:12px;">
             ${t.btn_open_calc} →
           </a>
         </div>
       `
       )
       .join('');
+    renderSavedInvoicesList();
+  }
+
+  window.qqLoadSavedLot = function (idx) {
+    const item = userSession.savedLots[idx];
+    if (!item) return;
+    const nums = (String(item.bid || '').match(/[\d,]+/g) || []).map((s) => parseInt(s.replace(/,/g, ''), 10)).filter((n) => !isNaN(n));
+    const midBid = nums.length >= 2 ? Math.round((nums[0] + nums[1]) / 2) : (nums[0] || 6400);
+    const isHyb = /sonata|hybrid|hibrid|elantra/i.test(item.title);
+    const cc = /range rover/i.test(item.title) ? 3000 : 2000;
+    if (typeof window.loadLotToCalc === 'function') {
+      window.loadLotToCalc(midBid, cc, isHyb ? 'hybrid' : 'petrol', item.title);
+    }
+  };
+
+  function renderSavedInvoicesList() {
+    const pane2 = document.getElementById('portal-pane-2');
+    if (!pane2) return;
+    let listWrap = document.getElementById('qq-saved-invoices-wrap');
+    if (!listWrap) {
+      const box = pane2.querySelector('div');
+      if (!box) return;
+      const staticRow = box.querySelector('div[style*="justify-content:space-between"]');
+      listWrap = document.createElement('div');
+      listWrap.id = 'qq-saved-invoices-wrap';
+      listWrap.style.cssText = 'display:flex;flex-direction:column;gap:8px;';
+      if (staticRow) {
+        staticRow.replaceWith(listWrap);
+      } else {
+        box.appendChild(listWrap);
+      }
+    }
+    const invoices = Array.isArray(userSession.savedInvoices) && userSession.savedInvoices.length
+      ? userSession.savedInvoices
+      : [{ label: '2022 HYUNDAI SONATA HYBRID ($6,400 + Gömrük + Yol)', total: '18,973.70 ₼ (Açar Təhvil)' }];
+    listWrap.innerHTML = invoices
+      .slice(0, 5)
+      .map(
+        (inv) => `
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--bg-card);border:1px solid var(--border-orange);border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:12px;gap:8px;flex-wrap:wrap;">
+        <span>${inv.label}</span>
+        <strong style="color:var(--orange-core);">${inv.total}</strong>
+      </div>
+    `
+      )
+      .join('');
+    renderProShieldState();
+  }
+
+  function renderProShieldState() {
+    const isPro = userSession.proActive !== false;
+    const tagEl = document.getElementById('qq-pro-shield-tag');
+    const pillEl = document.getElementById('qq-pro-status-pill');
+    const descEl = document.getElementById('qq-pro-shield-desc');
+    const availLbl = document.getElementById('qq-pro-avail-lbl');
+    const availVal = document.getElementById('qq-pro-avail-val');
+    const escLbl = document.getElementById('qq-pro-escrow-lbl');
+    const escVal = document.getElementById('qq-pro-escrow-val');
+    const btnEl = document.getElementById('qq-pro-refund-btn');
+    const depEl = document.getElementById('pkpi-dep-val');
+
+    const i18nShield = {
+      az: {
+        tag: '🛡️ AAA PRO BIDDER & CARFAX SHIELD // 72-SAATLIQ ZƏMANƏT (20% / 80% ESCROW)',
+        pillOn: '● PRO AKTİV • 72h Hold',
+        pillOff: '○ PRO DEAKTİV • 100% Geri Qaytarıldı',
+        desc: 'Apple / Stripe 72 saatlıq (3 gün) geri qaytarma qaydası: ödənişdən dərhal sonra <strong>20% Carfax & Bid krediti (20 kredit)</strong> aktivləşir, <strong>80% (80 kredit)</strong> isə 72 saatlıq Escrow qorunmasında saxlanılır. 3 gün ərzində 1 kliklə tam geri qaytarma zamanı PRO dərhal deaktiv edilir.',
+        availLbl: '20% Dərhal Aktiv (72s)',
+        availOn: '20 / 20 Carfax Krediti',
+        availOff: '0 / 0 Kredit (Deaktiv)',
+        escLbl: '80% Escrow Hold (72s sonra)',
+        escOn: '80 Kredit (Hold 71s 58d)',
+        escOff: '0 Kredit (100% Refunded)',
+        btnRefund: '⚡ 1-Kliklə 72 Saatlıq Geri Qaytarma & PRO Deaktiv Et',
+        btnReactivate: '↻ PRO Hesabı Yenidən Aktivləşdir (20% / 80% Hold)'
+      },
+      ru: {
+        tag: '🛡️ AAA PRO BIDDER & CARFAX SHIELD // ГАРАНТИЯ 72 ЧАСА (20% / 80% ESCROW)',
+        pillOn: '● PRO АКТИВЕН • Холд 72ч',
+        pillOff: '○ PRO ОТКЛЮЧЕН • Возврат 100%',
+        desc: 'Правило 72-часового (3 дня) возврата Apple / Stripe: сразу после оплаты доступны <strong>20% кредитов Carfax & Bid (20 кредитов)</strong>, а <strong>80% (80 кредитов)</strong> находятся в 72-часовом Escrow-холде. При возврате в 1 клик в течение 3 дней PRO мгновенно отключается.',
+        availLbl: '20% Доступно сразу (72ч)',
+        availOn: '20 / 20 Кредитов Carfax',
+        availOff: '0 / 0 Кредитов (Отключено)',
+        escLbl: '80% Escrow Холд (после 72ч)',
+        escOn: '80 Кредитов (Холд 71ч 58м)',
+        escOff: '0 Кредитов (Возврат 100%)',
+        btnRefund: '⚡ Возврат в 1 клик (72ч) и авто-отключение PRO',
+        btnReactivate: '↻ Реактивировать PRO-доступ (20% / 80% Холд)'
+      },
+      en: {
+        tag: '🛡️ AAA PRO BIDDER & CARFAX SHIELD // 72-HOUR GUARANTEE (20% / 80% ESCROW)',
+        pillOn: '● PRO ACTIVE • 72h Hold',
+        pillOff: '○ PRO DISABLED • 100% Refunded',
+        desc: 'Apple / Stripe 72-hour (3-day) refund rule: immediately upon payment, <strong>20% of Carfax & Bid credits (20 credits)</strong> unlock while <strong>80% (80 credits)</strong> remain in a 72-hour Escrow Hold. A 1-click refund within 3 days immediately disables PRO.',
+        availLbl: '20% Available Now (72h)',
+        availOn: '20 / 20 Carfax Credits',
+        availOff: '0 / 0 Credits (Disabled)',
+        escLbl: '80% Escrow Hold (after 72h)',
+        escOn: '80 Credits (Hold 71h 58m)',
+        escOff: '0 Credits (100% Refunded)',
+        btnRefund: '⚡ 1-Click 72h Refund & Auto-Disable PRO',
+        btnReactivate: '↻ Re-Activate PRO Access (20% / 80% Hold)'
+      }
+    };
+    const s = i18nShield[currentLang] || i18nShield.az;
+    if (tagEl) tagEl.textContent = s.tag;
+    if (descEl) descEl.innerHTML = s.desc;
+    if (availLbl) availLbl.textContent = s.availLbl;
+    if (escLbl) escLbl.textContent = s.escLbl;
+    if (pillEl) {
+      pillEl.textContent = isPro ? s.pillOn : s.pillOff;
+      pillEl.style.background = isPro ? 'rgba(16,185,129,0.14)' : 'rgba(239,68,68,0.14)';
+      pillEl.style.color = isPro ? 'var(--emerald-ok)' : '#ef4444';
+    }
+    if (availVal) {
+      availVal.textContent = isPro ? s.availOn : s.availOff;
+      availVal.style.color = isPro ? 'var(--emerald-ok)' : 'var(--text-muted)';
+    }
+    if (escVal) {
+      escVal.textContent = isPro ? s.escOn : s.escOff;
+      escVal.style.color = isPro ? 'var(--orange-core)' : 'var(--text-muted)';
+    }
+    if (btnEl) {
+      btnEl.textContent = isPro ? s.btnRefund : s.btnReactivate;
+    }
+    if (depEl) {
+      depEl.textContent = isPro ? '$1,500.00' : '$0.00 (Refunded)';
+      depEl.style.color = isPro ? 'var(--emerald-ok)' : 'var(--text-muted)';
+    }
+  }
+
+  window.qqToggleProRefund = function () {
+    const currentlyPro = userSession.proActive !== false;
+    userSession.proActive = !currentlyPro;
+    userSession.deposit = userSession.proActive ? '$1,500.00' : '$0.00 (Refunded)';
+    renderProShieldState();
+    persistAndSyncQepikSession(
+      userSession.proActive
+        ? '🛡️ AAA — avtoauksion.az PRO Re-Activated (20%/80% 72h Escrow)'
+        : '⚡ AAA — avtoauksion.az 72h 1-Click Refund Executed & PRO Auto-Disabled'
+    );
+  };
+
+  function persistAndSyncQepikSession(actionLabel) {
+    try {
+      localStorage.setItem('qq_user_session_v2', JSON.stringify(userSession));
+    } catch (_) {}
+    syncQepikUnifiedProfile(actionLabel || 'AAA — avtoauksion.az Portal');
+  }
+
+  async function syncQepikUnifiedProfile(actionLabel) {
+    try {
+      const rawIdent = String(userSession.ident || userSession.clientId || 'aaa_guest').toLowerCase();
+      const cleanKey = ('qq_' + rawIdent.replace(/[^a-z0-9@._+-]/g, '_')).slice(0, 64);
+      const siteSyncId = /^(DAV|AAA)-\d{4}-\d{4,8}$/.test(String(userSession.clientId || ''))
+        ? userSession.clientId
+        : 'AAA-2026-8841';
+      const nowIso = new Date().toISOString();
+      const payloadObj = {
+        siteSyncId: siteSyncId,
+        collectorIdNumber: siteSyncId.replace(/^(DAV|AAA)-2026-/, ''),
+        platform: 'Web-AAA-AvtoAuksion',
+        updatedAt: nowIso,
+        lastUserAction: actionLabel || 'AAA — avtoauksion.az Web',
+        userAccountProfile: {
+          firstName: userSession.name || 'Müştəri',
+          lastName: '',
+          preferredLang: currentLang,
+          linkedProviders: {
+            google: { linked: /google/i.test(userSession.method), identifier: /google/i.test(userSession.method) ? userSession.ident : '' },
+            apple: { linked: /apple/i.test(userSession.method), identifier: /apple/i.test(userSession.method) ? userSession.ident : '' },
+            sms: { linked: /sms/i.test(userSession.method), identifier: /sms/i.test(userSession.method) ? userSession.ident : '' }
+          }
+        },
+        qepikCabinet: {
+          clientId: siteSyncId,
+          method: userSession.method,
+          savedLotsCount: (userSession.savedLots || []).length,
+          savedLots: (userSession.savedLots || []).slice(0, 10),
+          savedInvoices: (userSession.savedInvoices || []).slice(0, 5)
+        },
+        telemetry: {
+          currentActivity: actionLabel || 'AAA — avtoauksion.az Web',
+          activeLang: currentLang,
+          countryCode: 'AZ',
+          countryName: 'Азербайджан',
+          countryFlag: '🇦🇿',
+          city: 'Баку'
+        }
+      };
+      const url = `https://firestore.googleapis.com/v1/projects/gasanov-14a7d/databases/(default)/documents/cashcheck_unified_profiles/${encodeURIComponent(cleanKey)}`;
+      await fetch(url, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: {
+            accountKey: { stringValue: cleanKey },
+            siteSyncId: { stringValue: siteSyncId },
+            payloadJson: { stringValue: JSON.stringify(payloadObj) },
+            platform: { stringValue: 'Web-Qepik' },
+            updatedAt: { stringValue: nowIso }
+          }
+        })
+      });
+    } catch (_) {}
   }
 
   // Global Auth Handlers
@@ -874,16 +1108,48 @@
       userSession.method = 'Google OAuth';
       userSession.name = 'Orxan Məmmədov';
       userSession.ident = 'Google OAuth • orxan.m@gmail.com';
-      document.getElementById('portal-avatar-initials').textContent = 'OM';
+      const av = document.getElementById('portal-avatar-initials');
+      if (av) av.textContent = 'OM';
     } else if (provider === 'Apple') {
       document.getElementById('btn-auth-apple')?.classList.add('active-method');
       userSession.method = 'Apple ID';
       userSession.name = 'Orxan M. (Apple ID)';
       userSession.ident = 'Apple Private Relay • f8x92@privaterelay.appleid.com';
-      document.getElementById('portal-avatar-initials').textContent = '🍎';
+      const av = document.getElementById('portal-avatar-initials');
+      if (av) av.textContent = '🍎';
     }
-    document.getElementById('portal-user-name').textContent = userSession.name;
-    document.getElementById('portal-user-ident').textContent = userSession.ident;
+    const nmEl = document.getElementById('portal-user-name');
+    const idEl = document.getElementById('portal-user-ident');
+    if (nmEl) nmEl.textContent = userSession.name;
+    if (idEl) idEl.textContent = userSession.ident;
+    const mAuth = document.getElementById('portal-auth-view');
+    const mDash = document.getElementById('portal-dashboard-view');
+    const mBadge = document.getElementById('portal-method-badge');
+    if (mAuth && mDash) {
+      mAuth.style.display = 'none';
+      mDash.style.display = 'block';
+    }
+    if (mBadge) mBadge.textContent = 'VERIFIED CLIENT // ' + userSession.method.toUpperCase();
+    persistAndSyncQepikSession('🔐 AAA — avtoauksion.az Login: ' + userSession.method);
+  };
+
+  window.qqSyncModalAuth = function (providerName) {
+    const pLow = String(providerName || '').toLowerCase();
+    if (pLow.includes('google')) {
+      window.qqAuthLogin('Google');
+    } else if (pLow.includes('apple')) {
+      window.qqAuthLogin('Apple');
+    } else {
+      const modalPhone = document.getElementById('sms-phone-input')?.value || '+994 50 505 00 59';
+      const cabPhone = document.getElementById('qq-sms-phone');
+      if (cabPhone) cabPhone.value = modalPhone;
+      window.qqVerifySmsOtp();
+    }
+  };
+
+  window.qqAuthLogout = function () {
+    userSession.method = 'Guest';
+    persistAndSyncQepikSession('👋 AAA — avtoauksion.az Logout');
   };
 
   window.qqFocusSms = function () {
@@ -903,9 +1169,13 @@
     userSession.method = 'SMS OTP';
     userSession.name = 'VIP Müştəri (' + phone + ')';
     userSession.ident = 'SMS Təsdiqlənib ✓ • ' + phone;
-    document.getElementById('portal-avatar-initials').textContent = '📱';
-    document.getElementById('portal-user-name').textContent = userSession.name;
-    document.getElementById('portal-user-ident').textContent = userSession.ident;
+    const av = document.getElementById('portal-avatar-initials');
+    const nmEl = document.getElementById('portal-user-name');
+    const idEl = document.getElementById('portal-user-ident');
+    if (av) av.textContent = '📱';
+    if (nmEl) nmEl.textContent = userSession.name;
+    if (idEl) idEl.textContent = userSession.ident;
+    persistAndSyncQepikSession('📱 AAA — avtoauksion.az SMS Verified: ' + phone);
   };
 
   window.qqSwitchPortalTab = function (idx, btn) {
@@ -1000,7 +1270,7 @@
     // Hero Stage
     const stageTopSpans = document.querySelectorAll('.stage-topbar > span');
     if (stageTopSpans[0]) {
-      const code = document.getElementById('hero-ig-code')?.textContent || '@qepiyeqepik';
+      const code = document.getElementById('hero-ig-code')?.textContent || 'avtoauksion.az';
       stageTopSpans[0].innerHTML = `${t.stage_top_left} <strong id="hero-ig-code" style="color:var(--orange-core);">${code}</strong>`;
     }
     if (stageTopSpans[1]) stageTopSpans[1].textContent = t.stage_verified;
@@ -1259,16 +1529,131 @@
     if (fDivs[1]) fDivs[1].textContent = t.footer_right;
   }
 
+  function syncDynamicHeroAndCalcI18n() {
+    const t = DICT[currentLang] || DICT.az;
+    const heroDateEl = document.getElementById('hero-real-date');
+    if (heroDateEl) {
+      const dNum = (heroDateEl.textContent.match(/\d+/) || ['02'])[0];
+      const dPrefix = currentLang === 'ru' ? '● ДАТА АУКЦИОНА:' : currentLang === 'en' ? '● AUCTION DATE:' : '● HƏRRAC TARİXİ:';
+      heroDateEl.textContent = `${dPrefix} ${dNum} ${t.month_nov.toUpperCase()} AUCTION`;
+    }
+    const heroEngEl = document.getElementById('hero-real-engine');
+    if (heroEngEl) {
+      const lit = (heroEngEl.textContent.match(/[\d.]+L/) || ['2.0L'])[0];
+      const isH = /hybrid|hibrid|гибрид/i.test(heroEngEl.textContent);
+      heroEngEl.textContent = `${lit} ${(isH ? t.fuel_hybrid : t.fuel_petrol).toUpperCase()}`;
+    }
+    const heroMilesEl = document.getElementById('hero-real-miles');
+    if (heroMilesEl) {
+      const mNum = (heroMilesEl.textContent.match(/[\d,]+/) || ['65,572'])[0];
+      heroMilesEl.textContent = `${mNum} ${t.unit_miles}`;
+    }
+    const heroAucEl = document.getElementById('hero-real-auc');
+    if (heroAucEl) {
+      const aNum = (heroAucEl.textContent.match(/\d+/) || ['02'])[0];
+      heroAucEl.textContent = `${aNum} ${t.month_nov} auction`;
+    }
+    const selBanner = document.getElementById('calc-selected-car-banner');
+    if (selBanner) {
+      const bidTxt = document.getElementById('lbl-bid-val')?.textContent || '$6,400';
+      const carMatch = selBanner.textContent.match(/:\s*([^(]+)\(/);
+      const carName = carMatch ? carMatch[1].trim() : '2022 HYUNDAI SONATA LIMITED HYBRID';
+      selBanner.textContent = `${t.calc_sel_prefix} ${carName} (${bidTxt} ${t.calc_sel_suffix})`;
+    }
+    const activeCountryIdx = Array.from(document.querySelectorAll('#country-pills .select-pill')).findIndex((b) => b.classList.contains('active'));
+    const countryValEl = document.getElementById('lbl-country-val');
+    if (countryValEl && activeCountryIdx >= 0) {
+      countryValEl.textContent = [t.c_country_usa, t.c_country_kor, t.c_country_chn][activeCountryIdx];
+    }
+    const activeFuelIdx = Array.from(document.querySelectorAll('#fuel-pills .select-pill')).findIndex((b) => b.classList.contains('active'));
+    const fuelValEl = document.getElementById('lbl-fuel-val');
+    if (fuelValEl && activeFuelIdx >= 0) {
+      fuelValEl.textContent = [t.c_fuel_petrol, t.c_fuel_hybrid, t.c_fuel_ev][activeFuelIdx];
+    }
+    const ccValEl = document.getElementById('lbl-cc-val');
+    const ccInput = document.getElementById('range-cc');
+    if (ccValEl && ccInput) {
+      const ccNum = parseInt(ccInput.value, 10) || 2000;
+      const unitCc = currentLang === 'ru' ? 'см³' : currentLang === 'en' ? 'cc' : 'sm³';
+      ccValEl.textContent = activeFuelIdx === 2 ? `${t.c_fuel_ev} (0 ${unitCc})` : `${ccNum} ${unitCc} (${(ccNum / 1000).toFixed(1)}L)`;
+    }
+    const saveEl = document.getElementById('inv-save-azn');
+    if (saveEl) {
+      const saveNum = (saveEl.textContent.match(/\+[\d,.]+/) || ['+9,106.30'])[0].replace('+', '');
+      saveEl.textContent = `${t.inv_save_prefix}${saveNum}${t.inv_save_suffix}`;
+    }
+  }
+
+  function hookInteractiveControlsForI18n() {
+    const origSwitchHero = window.switchHeroReal;
+    if (typeof origSwitchHero === 'function' && !origSwitchHero.__qqHooked) {
+      const wrappedHero = function (idx) {
+        const res = origSwitchHero.apply(this, arguments);
+        syncDynamicHeroAndCalcI18n();
+        return res;
+      };
+      wrappedHero.__qqHooked = true;
+      window.switchHeroReal = wrappedHero;
+    }
+
+    const origRecalc = window.recalcQepik;
+    if (typeof origRecalc === 'function' && !origRecalc.__qqHooked) {
+      const wrappedRecalc = function () {
+        const res = origRecalc.apply(this, arguments);
+        syncDynamicHeroAndCalcI18n();
+        return res;
+      };
+      wrappedRecalc.__qqHooked = true;
+      window.recalcQepik = wrappedRecalc;
+    }
+
+    const origLoadLot = window.loadLotToCalc;
+    if (typeof origLoadLot === 'function' && !origLoadLot.__qqHooked) {
+      const wrappedLoadLot = function (bidUsd, ccVal, fuelType, title) {
+        const res = origLoadLot.apply(this, arguments);
+        syncDynamicHeroAndCalcI18n();
+        const totAzn = document.getElementById('inv-total-azn')?.textContent || '18,973.70 ₼';
+        if (!Array.isArray(userSession.savedInvoices)) userSession.savedInvoices = [];
+        const entryLabel = `${String(title || 'LOT').toUpperCase()} ($${Number(bidUsd || 6400).toLocaleString('en-US')} + Gömrük + Yol)`;
+        userSession.savedInvoices = userSession.savedInvoices.filter((x) => x.label !== entryLabel);
+        userSession.savedInvoices.unshift({ label: entryLabel, total: `${totAzn} (Açar Təhvil)` });
+        userSession.savedInvoices = userSession.savedInvoices.slice(0, 5);
+        renderSavedInvoicesList();
+        persistAndSyncQepikSession('🧮 Hesablayıcı: ' + title);
+        return res;
+      };
+      wrappedLoadLot.__qqHooked = true;
+      window.loadLotToCalc = wrappedLoadLot;
+    }
+  }
+
   // Override global setLang
   window.setLang = function (lang) {
     applyTranslations(lang);
   };
 
   function initAll() {
+    try {
+      const rawSaved = localStorage.getItem('qq_user_session_v2');
+      if (rawSaved) {
+        const parsed = JSON.parse(rawSaved);
+        if (parsed && typeof parsed === 'object') {
+          userSession = Object.assign(userSession, parsed);
+        }
+      }
+    } catch (_) {}
     injectHeaderCabinetBtn();
     injectCardSaveButtons();
     injectCabinetSection();
+    hookInteractiveControlsForI18n();
+    const nmEl = document.getElementById('portal-user-name');
+    const idEl = document.getElementById('portal-user-ident');
+    if (nmEl && userSession.name) nmEl.textContent = userSession.name;
+    if (idEl && userSession.ident) idEl.textContent = userSession.ident;
     applyTranslations('az');
+    setTimeout(() => {
+      syncQepikUnifiedProfile('👀 AAA — avtoauksion.az Web Visit');
+    }, 1200);
   }
 
   if (document.readyState === 'loading') {
