@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
   <defs>
     <linearGradient id="aaaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF781F" />
-      <stop offset="100%" stop-color="#E64A00" />
+      <stop offset="0%" stop-color="#FF5500"/>
+      <stop offset="100%" stop-color="#CC3700"/>
     </linearGradient>
   </defs>
-  <rect width="120" height="120" rx="28" fill="#0F141C" />
-  <rect x="3" y="3" width="114" height="114" rx="25" fill="none" stroke="url(#aaaGrad)" stroke-width="4" />
-  <text x="60" y="66" text-anchor="middle" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="800" font-size="38" fill="#FFFFFF" letter-spacing="-1">AAA</text>
-  <text x="60" y="92" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11.5" fill="#FF6600" letter-spacing="0.5">.AZ</text>
+  <rect width="120" height="120" rx="26" fill="#0B0F17"/>
+  <rect x="4" y="4" width="112" height="112" rx="22" fill="none" stroke="url(#aaaGrad)" stroke-width="4"/>
+  <path d="M24 76 L38 44 L82 44 L96 76 Z" fill="none" stroke="#FF5500" stroke-width="3.5" stroke-linejoin="round" opacity="0.22"/>
+  <text x="60" y="62" text-anchor="middle" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="1">AUTO</text>
+  <text x="60" y="88" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12.5" fill="#FF5500" letter-spacing="1.2">AUKSION.AZ</text>
 </svg>
